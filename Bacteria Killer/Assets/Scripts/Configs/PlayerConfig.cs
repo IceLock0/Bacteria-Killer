@@ -7,6 +7,10 @@ namespace Configs
     {
         [SerializeField] private float _linearSpeed;
 
+        [SerializeField] private Vector2 _detectorSize;
+        
         public float LinearSpeed => _linearSpeed;
+
+        public Vector2 DetectorSize => _detectorSize;
     }
 }

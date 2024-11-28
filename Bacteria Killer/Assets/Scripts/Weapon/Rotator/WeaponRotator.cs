@@ -1,12 +1,29 @@
+using Entities.Player;
 using UnityEngine;
+using Zenject;
 
 public class WeaponRotator : MonoBehaviour
 {
     [SerializeField] private bool _isFlipped;
+
+    private PlayerClosestEnemyDetector _enemyDetector;
     
-    void Update()
+    private Vector2 _target;
+    
+    [Inject]
+    public void Initialize(PlayerClosestEnemyDetector enemyDetector)
     {
-        var direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        _enemyDetector = enemyDetector;
+    }
+    
+    private void Update()
+    {
+        var closestEnemy = _enemyDetector.ClosestEnemy;
+
+        if (closestEnemy != null)
+            _target = closestEnemy.transform.position;
+
+        var direction = _target - (Vector2)transform.position;
 
         var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
@@ -14,5 +31,7 @@ public class WeaponRotator : MonoBehaviour
             angle -= 180;
         
         transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        _target = Vector2.zero;
     }
 }

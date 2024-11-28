@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   _linearSpeed: 165
+  _detectorSize: {x: 7, y: 7}

@@ -8,13 +8,16 @@ public class ClosestObjectDetectorService
         T closestObject = default;
 
         var allColliders = Physics2D.OverlapBoxAll(at, size, angle);
-        
+
         var filteredColliders = FilterCollidersByType<T>(allColliders);
 
         var closestCollider = FindClosestCollider(filteredColliders, at);
         
+        if (closestCollider == null)
+            return default;
+            
         closestObject = closestCollider.GetComponent<T>();
-        
+
         return closestObject;
     }
 
@@ -37,13 +40,16 @@ public class ClosestObjectDetectorService
     {
         Collider2D closestCollider = null;
         
-        float minDistance = 0;
+        if (colliders.Count == 0)
+            return closestCollider;
+        
+        float minDistance = (at - (Vector2) colliders[0].transform.position).magnitude;
 
         foreach (var collider in colliders)
         {
             var distance = (at - (Vector2) collider.transform.position).magnitude;
 
-            if (distance < minDistance)
+            if (distance <= minDistance)
             {
                 minDistance = distance;
                 closestCollider = collider;

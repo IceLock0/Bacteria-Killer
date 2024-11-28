@@ -15,7 +15,7 @@ namespace Installers.Configs
 
         private void BindPlayerConfig()
         {
-            Container.Bind<PlayerConfig>().FromInstance(_playerConfig).AsSingle().NonLazy();
+            Container.Bind<PlayerConfig>().FromInstance(_playerConfig).AsSingle();
         }
     }
 }
