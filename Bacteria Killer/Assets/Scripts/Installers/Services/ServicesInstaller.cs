@@ -7,11 +7,17 @@ namespace Installers.Services
         public override void InstallBindings()
         {
             BindInputService();
+            BindClosetObjectDetecrorService();
         }
 
         private void BindInputService()
         {
-            Container.Bind<InputService>().AsSingle().NonLazy();
+            Container.Bind<InputService>().AsSingle();
+        }
+
+        private void BindClosetObjectDetecrorService()
+        {
+            Container.Bind<ClosestObjectDetectorService>().AsSingle();
         }
     }
 }
