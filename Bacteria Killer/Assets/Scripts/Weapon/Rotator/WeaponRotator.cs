@@ -20,8 +20,10 @@ public class WeaponRotator : MonoBehaviour
     {
         var closestEnemy = _enemyDetector.ClosestEnemy;
 
-        if (closestEnemy != null)
-            _target = closestEnemy.transform.position;
+        if (closestEnemy == null)
+            return;
+        
+        _target = closestEnemy.transform.position;
 
         var direction = _target - (Vector2)transform.position;
 
@@ -31,7 +33,5 @@ public class WeaponRotator : MonoBehaviour
             angle -= 180;
         
         transform.rotation = Quaternion.Euler(0, 0, angle);
-
-        _target = Vector2.zero;
     }
 }
