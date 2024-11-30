@@ -159,7 +159,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 107271542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0d3bf8f56804a4699888d5c6bbddfca, type: 3}
+  m_Script: {fileID: 11500000, guid: 5057d0ff8a69440eb651aec42bf84a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _detectorSize: {x: 7, y: 7}
@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerConfig: {fileID: 11400000, guid: 1ddae1496a3146e4684e8df824787394, type: 2}
+  _weaponConfig: {fileID: 11400000, guid: c66f9fa49edc45246a56dcb8d8d51dfc, type: 2}
 --- !u!4 &518377418
 Transform:
   m_ObjectHideFlags: 0
@@ -549,7 +550,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1024328279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49164632e581c374a8bbc6642e945f0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 46a37ef8087e4bbf8700337338bd1595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isFlipped: 0
@@ -952,6 +953,7 @@ MonoBehaviour:
   _monoInstallers:
   - {fileID: 518377417}
   - {fileID: 797683325}
+  - {fileID: 1153004665}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -1229,7 +1231,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2000923845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49164632e581c374a8bbc6642e945f0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 46a37ef8087e4bbf8700337338bd1595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isFlipped: 1

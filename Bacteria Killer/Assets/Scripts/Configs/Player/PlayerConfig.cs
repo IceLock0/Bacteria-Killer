@@ -2,7 +2,7 @@
 
 namespace Configs
 {
-    [CreateAssetMenu(fileName = "Configs", menuName = "Configs/Player", order = 0)]
+    [CreateAssetMenu(fileName = "Player Config", menuName = "Configs/Player", order = 0)]
     public class PlayerConfig : ScriptableObject
     {
         [SerializeField] private float _linearSpeed;
