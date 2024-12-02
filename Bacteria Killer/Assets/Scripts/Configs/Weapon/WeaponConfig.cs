@@ -10,7 +10,7 @@ namespace Configs.Weapon
         [SerializeField] private int _ammoCapacity;
         
         [SerializeField] private float _reloadingTime;
-        
+
         public float FireRate => _fireRate;
 
         public int AmmoCapacity => _ammoCapacity;

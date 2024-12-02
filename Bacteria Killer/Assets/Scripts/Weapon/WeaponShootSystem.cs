@@ -1,8 +1,9 @@
-﻿using Entities.Player;
+﻿using System;
+using Entities.Player;
 
 namespace Weapon
 {
-    public class WeaponShootSystem
+    public class WeaponShootSystem : IDisposable
     {
         private readonly Weapon _weapon;
         
@@ -10,7 +11,8 @@ namespace Weapon
         private readonly TargetChecker _targetChecker;
 
         private readonly WeaponChecker _sourceChecker;
-        private readonly WeaponChecker _terminalChecker;
+        
+        private readonly TerminalChecker _terminalChecker;
 
         public WeaponShootSystem(Weapon weapon, PlayerClosestEnemyDetector enemyDetector)
         {
@@ -25,15 +27,30 @@ namespace Weapon
             InitializeSequence();
         }
 
+        public event Action TargetShooted; 
+        
         public void Shoot()
         {
             _sourceChecker.Check();
         }
         
+        public void Dispose()
+        {
+            _terminalChecker.Shooted -= OnShooted;
+        } 
+        
         private void InitializeSequence()
         {
             _targetChecker.NextChecker = _terminalChecker;
             _reloadChecker.NextChecker = _targetChecker;
+
+            _terminalChecker.Shooted += OnShooted;
         }
+        
+        private void OnShooted()
+        {
+            TargetShooted?.Invoke();
+        }
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
@@ -15,6 +16,8 @@ namespace Weapon
             _weapon = weapon;
         }
 
+        public event Action Shooted;
+        
         public override void Check()
         {
             if (_isCooldownExpired)
@@ -23,6 +26,7 @@ namespace Weapon
                 _weapon.WeaponData.CurrentAmmo--;
                 _isCooldownExpired = false;
                 WaitNextFire().Forget();
+                Shooted?.Invoke();
             }
         }
 

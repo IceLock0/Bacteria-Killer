@@ -3,22 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ce175cca-be82-4093-94d1-abee388480f2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bacteria Killer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bacteria Killer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Player.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Player.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Weapon/Weapon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Configs/Weapon/Weapon.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Configs/PlayerConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Configs/Player/PlayerConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Configs/PlayerConfig.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Configs/Player/PlayerConfig.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerClosestEnemyDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/Components/Detector/PlayerClosestEnemyDetector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/PlayerClosestEnemyDetector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/Components/Detector/PlayerClosestEnemyDetector.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/Configs/ConfigsInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/Configs/ConfigsInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Input/InputService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Input/InputService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Input/InputService.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Input/InputService.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Rotator.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Rotator.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Rotator/WeaponRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Rotator/WeaponRotator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Rotator/WeaponRotator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Rotator/WeaponRotator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Configs/Weapon/WeaponConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Configs/Weapon/WeaponConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/TerminalChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/TerminalChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/WeaponShootSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapon/WeaponShootSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Bacteria.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Bacteria.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Bacteria.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Bacteria.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +88,9 @@
       <workItem from="1732637117045" duration="977000" />
       <workItem from="1732697550684" duration="2604000" />
       <workItem from="1732796859168" duration="10660000" />
-      <workItem from="1732957973144" duration="14498000" />
+      <workItem from="1732957973144" duration="14598000" />
+      <workItem from="1733143382366" duration="6178000" />
+      <workItem from="1733158375113" duration="2539000" />
     </task>
     <servers />
   </component>
