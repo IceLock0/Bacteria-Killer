@@ -1,15 +1,16 @@
-﻿using UnityEngine;
+﻿using Configs;
+using UnityEngine;
 
 namespace Editor
 {
     public class PlayerDebug : MonoBehaviour
     {
-        [SerializeField] private Vector2 _detectorSize;
+        [SerializeField] private PlayerConfig _playerConfig;
 
         private void OnDrawGizmos()
         {
             //detector
-            Gizmos.DrawWireCube(transform.position, _detectorSize);
+            Gizmos.DrawWireCube(transform.position, _playerConfig.DetectorSize);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Configs;
+using Configs.Entities;
 using Configs.Weapon;
 using UnityEngine;
 using Zenject;
@@ -9,11 +10,13 @@ namespace Installers.Configs
     {
         [SerializeField] private PlayerConfig _playerConfig;
         [SerializeField] private WeaponConfig _weaponConfig;
+        [SerializeField] private EnemyConfig _enemyConfig;
         
         public override void InstallBindings()
         {
             BindPlayerConfig();
             BindWeaponConfig();
+            BindEnemyConfig();
         }
 
         private void BindPlayerConfig()
@@ -24,6 +27,11 @@ namespace Installers.Configs
         private void BindWeaponConfig()
         {
             Container.Bind<WeaponConfig>().FromInstance(_weaponConfig).AsSingle();
+        }
+
+        private void BindEnemyConfig()
+        {
+            Container.Bind<EnemyConfig>().FromInstance(_enemyConfig).AsSingle();
         }
     }
 }

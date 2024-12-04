@@ -32,8 +32,6 @@ namespace Weapon
             _shootPrefab = Instantiate(_shootPrefab);
             
             _shootView = new ShootView(_shootPrefab, _weaponShootSystem, _firePoint, closestEnemyDetector, weaponConfig.FireRate * 0.1f);
-
-            
         }
 
         public WeaponData WeaponData { get; private set; }

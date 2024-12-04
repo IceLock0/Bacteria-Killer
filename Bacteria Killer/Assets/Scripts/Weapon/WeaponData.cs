@@ -11,6 +11,8 @@ namespace Weapon
             AmmoCapacity = weaponConfig.AmmoCapacity;
             CurrentAmmo = AmmoCapacity;
             ReloadingTime = weaponConfig.ReloadingTime;
+
+            Damage = weaponConfig.Damage;
         }
 
         public float FireRate { get;}
@@ -19,5 +21,7 @@ namespace Weapon
         public int AmmoCapacity { get; }
         
         public float ReloadingTime { get; }
+
+        public float Damage { get; }
     }
 }
