@@ -6,6 +6,7 @@ using Zenject;
 
 namespace Entities.Player
 {
+    [RequireComponent(typeof(Rigidbody2D))]
     public class Player : MonoBehaviour
     {
         private PlayerClosestEnemyDetector _enemyDetector;
