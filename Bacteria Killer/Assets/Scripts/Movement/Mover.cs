@@ -1,23 +1,30 @@
-﻿using System;
+﻿using Configs.Entities;
 using UnityEngine;
 
 namespace Movement
 {
-    public class Mover : MonoBehaviour
+    public class Mover
     {
-        private IMoveable _moveable;
+        private readonly IDirectionProvider _directionProvider;
 
-        private void Awake()
+        private readonly EntityConfig _config;
+
+        private readonly Rigidbody2D _rb;
+
+        public Mover(IDirectionProvider directionProvider, EntityConfig entityConfig, Rigidbody2D rb)
         {
-            _moveable = GetComponent<IMoveable>();
+            _directionProvider = directionProvider;
 
-            if (_moveable == null)
-                throw new NullReferenceException("IMoveable component not found.");
+            _config = entityConfig;
+
+            _rb = rb;
+            _rb.freezeRotation = true;
+            _rb.gravityScale = 0.0f;
         }
 
-        private void FixedUpdate()
+        public void Move(float deltaTime)
         {
-            _moveable.Move(_moveable.DirectionProvider.GetDirection() * Time.fixedDeltaTime);
+            _rb.velocity = _directionProvider.GetDirection() * _config.LinearSpeed * deltaTime;
         }
     }
 }

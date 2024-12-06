@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Movement
+namespace Movement.Direction.Player
 {
     public class PlayerDirectionProvider : IDirectionProvider
     {
@@ -14,7 +14,7 @@ namespace Movement
         
         public Vector2 GetDirection()
         {
-            return _inputService.Gameplay.Movement.ReadValue<Vector2>();
+            return _inputService.Gameplay.Movement.ReadValue<Vector2>().normalized;
         }
     }
 }
