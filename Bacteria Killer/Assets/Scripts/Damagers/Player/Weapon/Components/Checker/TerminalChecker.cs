@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Weapon
+namespace Damagers.Player.Weapon
 {
     public class TerminalChecker : WeaponChecker
     {
@@ -22,7 +22,6 @@ namespace Weapon
         {
             if (_isCooldownExpired)
             {
-                Debug.Log("Shoot");
                 _weapon.WeaponData.CurrentAmmo--;
                 _isCooldownExpired = false;
                 WaitNextFire().Forget();

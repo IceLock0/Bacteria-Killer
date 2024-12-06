@@ -3,10 +3,35 @@
   <component name="ChangeListManager">
     <list default="true" id="ce175cca-be82-4093-94d1-abee388480f2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bacteria Killer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bacteria Killer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Player/Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Player/Player.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Configs/Entities/Enemy/EnemyConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Configs/Entities/Enemy/EnemyConfig.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Direction/Enemy/EnemyDirectionProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Direction/Enemy/EnemyDirectionProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Mover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Mover/Mover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/Mover.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/Mover/Mover.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Weapon/ShootView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Weapon/ShootView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/IShootChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker/IShootChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/IShootChecker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker/IShootChecker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/ReloadChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker/ReloadChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/ReloadChecker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker/ReloadChecker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/TargetChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker/TargetChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/TargetChecker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker/TargetChecker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/TerminalChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker/TerminalChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/TerminalChecker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker/TerminalChecker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/WeaponChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker/WeaponChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/WeaponChecker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker/WeaponChecker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Rotator.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Rotator.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Rotator/WeaponRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Rotator/WeaponRotator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Rotator/WeaponRotator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Rotator/WeaponRotator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/Weapon.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Weapon.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/WeaponData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/WeaponData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/WeaponData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/WeaponShootSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/WeaponShootSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon/WeaponShootSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/WeaponShootSystem.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,15 +47,16 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/IShootChecker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/TargetChecker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker/IShootChecker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker/TargetChecker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/240ff6271d47469a95269de220922c381dba00/1f/9f661efe/Debug.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/Mover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/Mover/Mover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/Configs/ConfigsInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Runtime/Data/UniversalRenderPipelineAsset.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/ReloadChecker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Damagers/Enemy/Attacker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker/ReloadChecker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Configs/Entities/Player/PlayerConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon/Components/Checker/WeaponChecker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/Checker/WeaponChecker.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

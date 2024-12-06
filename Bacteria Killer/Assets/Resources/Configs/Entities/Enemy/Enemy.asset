@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _linearSpeed: 100
   _hp: 50
+  _attackDistance: 3
+  _attackDamage: 5

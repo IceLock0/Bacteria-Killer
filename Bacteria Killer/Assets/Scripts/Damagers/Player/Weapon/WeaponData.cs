@@ -1,6 +1,6 @@
 ﻿using Configs.Weapon;
 
-namespace Weapon
+namespace Damagers.Player.Weapon
 {
     public class WeaponData
     {

@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Entities.Player;
 using UnityEngine;
-using Weapon;
+using Damagers.Player.Weapon;
 
 namespace View.Weapon
 {

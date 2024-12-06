@@ -2,7 +2,7 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Weapon
+namespace Damagers.Player.Weapon
 {
     public class ReloadChecker : WeaponChecker
     {

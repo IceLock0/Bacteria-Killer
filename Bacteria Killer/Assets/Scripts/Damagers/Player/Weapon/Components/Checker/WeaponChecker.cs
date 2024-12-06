@@ -1,4 +1,4 @@
-﻿namespace Weapon
+﻿namespace Damagers.Player.Weapon
 {
     public abstract class WeaponChecker : IShootChecker
     {

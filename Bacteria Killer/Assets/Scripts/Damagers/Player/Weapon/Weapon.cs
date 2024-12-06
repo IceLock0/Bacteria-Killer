@@ -4,7 +4,7 @@ using UnityEngine;
 using View.Weapon;
 using Zenject;
 
-namespace Weapon
+namespace Damagers.Player.Weapon
 {
     public class Weapon : MonoBehaviour
     {

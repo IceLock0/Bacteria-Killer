@@ -2,7 +2,7 @@
 using Enemy.Components;
 using Entities.Player;
 
-namespace Weapon
+namespace Damagers.Player.Weapon
 {
     public class WeaponShootSystem : IDisposable
     {

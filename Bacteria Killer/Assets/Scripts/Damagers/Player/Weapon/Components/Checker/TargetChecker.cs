@@ -1,7 +1,7 @@
 ﻿using Entities.Player;
 using UnityEngine;
 
-namespace Weapon
+namespace Damagers.Player.Weapon
 {
     public class TargetChecker: WeaponChecker
     {
