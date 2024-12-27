@@ -22,6 +22,9 @@ namespace Services.Target
 
         public GameObject GetTarget()
         {
+            if (_playerTransform == null)
+                return null;
+            
             var enemy = _closestObjectFindService.GetClosestObjectInBoxByType<EnemyView>(_playerTransform.position, _cameraBounds);
             
             return enemy == null ? null : enemy.gameObject;

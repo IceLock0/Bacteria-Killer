@@ -19,7 +19,7 @@ namespace Services.Movement.DirectionProvider.Enemy
 
         public Vector2 GetDirection()
         {
-            if (IsPlayerClose())
+            if (_playerTransform == null || IsPlayerClose())
                 return Vector2.zero;
 
             return (_playerTransform.position - _enemyTransform.position).normalized;

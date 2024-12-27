@@ -1,6 +1,7 @@
 ﻿using Configs;
 using Configs.Wave;
 using EnemyWaves;
+using Services.Destroyer;
 using Services.Fabric.EnemyFabric;
 using Services.Fabric.PlayerFabric;
 using UnityEngine;
@@ -21,16 +22,20 @@ namespace Bootstrap.Game
         private PlayerView _playerView;
 
         private WaveHandler _waveHandler;
+
+        private IGameObjectDestroyerService _gameObjectDestroyerService;
         
         [Inject]
         public void Initialize(IPlayerFactory playerFactory, PlayerConfig playerConfig, IEnemyFactory enemyFactory,
-            WaveConfig waveConfig)
+            WaveConfig waveConfig, IGameObjectDestroyerService gameObjectDestroyerService)
         {
             _playerFactory = playerFactory;
             _playerConfig = playerConfig;
 
             _enemyFactory = enemyFactory;
             _waveConfig = waveConfig;
+
+            _gameObjectDestroyerService = gameObjectDestroyerService;
         }
 
         private void Awake()
@@ -52,7 +57,7 @@ namespace Bootstrap.Game
 
         private void CreateWaveHandler()
         {
-            _waveHandler = new WaveHandler(_enemyFactory, _waveConfig, _playerView.transform);
+            _waveHandler = new WaveHandler(_gameObjectDestroyerService, _enemyFactory, _waveConfig, _playerView.transform);
         }
 
         private void CreatePlayer()

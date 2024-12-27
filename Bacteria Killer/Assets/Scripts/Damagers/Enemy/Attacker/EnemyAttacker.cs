@@ -26,7 +26,7 @@ namespace Damagers.Enemy.Attacker
         
         public void Attack()
         {
-            if (!IsCanAttack() || !_player.TryGetComponent(out IDamageable damageable) || !_isCooldownExpired)
+            if (_player == null || !IsDistanceNear() || !_player.TryGetComponent(out IDamageable damageable) || !_isCooldownExpired)
                 return;
             
             damageable.TakeDamage(_damage);
@@ -34,7 +34,8 @@ namespace Damagers.Enemy.Attacker
             WaitNextFire().Forget();
         }
 
-        private bool IsCanAttack() => Vector2.Distance(_player.position, _at.position) <= _attackDistance;
+        private bool IsDistanceNear() 
+            => Vector2.Distance(_player.position, _at.position) <= _attackDistance;
         
         private async UniTaskVoid WaitNextFire()
         {

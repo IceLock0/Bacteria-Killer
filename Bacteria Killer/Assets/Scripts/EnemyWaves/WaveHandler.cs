@@ -1,4 +1,5 @@
 ﻿using Configs.Wave;
+using Services.Destroyer;
 using Services.Fabric.EnemyFabric;
 using UnityEngine;
 using View.Characters.Enemy;
@@ -8,6 +9,8 @@ namespace EnemyWaves
 {
     public class WaveHandler
     {
+        private readonly IGameObjectDestroyerService _gameObjectDestroyerService;
+        
         private readonly IEnemyFactory _factory;
 
         private readonly Transform _playerTransform;
@@ -22,8 +25,10 @@ namespace EnemyWaves
         private float _nextDifficult;
         private float _usedDifficult = 0;
 
-        public WaveHandler(IEnemyFactory factory, WaveConfig config, Transform playerTransform)
+        public WaveHandler(IGameObjectDestroyerService gameObjectDestroyerService, IEnemyFactory factory, WaveConfig config, Transform playerTransform)
         {
+            _gameObjectDestroyerService = gameObjectDestroyerService;
+            
             _factory = factory;
             
             _playerTransform = playerTransform;
@@ -41,16 +46,27 @@ namespace EnemyWaves
         
         public void OnEnable()
         {
+            _gameObjectDestroyerService.Destroyed += HandleRemoveEnemy;
             _wave.Expired += CreateWave;
         }
 
         public void OnDisable()
         {
+            _gameObjectDestroyerService.Destroyed -= HandleRemoveEnemy;
             _wave.Expired -= CreateWave;
         }
-        
-        public void CreateWave()
+
+        public void HandleRemoveEnemy(GameObject gameObject)
         {
+            Debug.Log("Handle");
+            
+            if(gameObject.TryGetComponent<EnemyView>(out var enemyView))
+                _wave.RemoveEnemy(enemyView);
+        }
+        
+        private void CreateWave()
+        {
+            Debug.Log($"WaveDifficult for create = {_nextDifficult}");
             while (_usedDifficult < _nextDifficult)
             {
                 AddEnemyToWave();

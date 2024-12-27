@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using ModestTree;
+using UnityEngine;
 using View;
 using View.Characters.Enemy;
 
@@ -18,9 +20,16 @@ namespace EnemyWaves
 
         public void RemoveEnemy(EnemyView enemy)
         {
-            _enemies.Remove(enemy);
+            if(_enemies.Contains(enemy))
+                _enemies.Remove(enemy);
+            else
+            {
+                Debug.LogWarning($"Enemy {enemy.name} not contained in enemies wave list.");
+                return;
+            }
             
-            Expired?.Invoke();
+            if(_enemies.IsEmpty())
+                Expired?.Invoke();
         }
     }
 }
