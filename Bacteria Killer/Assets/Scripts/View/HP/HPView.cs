@@ -1,35 +1,38 @@
-﻿using System;
-using Entities.Components;
+﻿using Configs.Entities;
+using Presenter.HP;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace View.HP
 {
-    public class HPView : IDisposable
+    public class HPView : MonoBehaviour
     {
-        private readonly HPComponent _hp;
+        private Image _image;
+        private float _maxHP;
         
-        private readonly Image _image;
-        private readonly float _maxHP;
-        
-        public HPView(HPComponent hp, Image image, float maxHP)
+        public void Initialize(CharacterConfig characterConfig)
         {
-            _hp = hp;
-            _hp.Changed += UpdateImage;
-            
-            _image = image;
-
-            _maxHP = maxHP;
+            _maxHP = characterConfig.MaxHp;
+            _image = GetComponentInChildren<Image>();
+            Presenter = new HPPresenter(this, _maxHP);
         }
 
-        private void UpdateImage(float currentHP)
+        public HPPresenter Presenter { get; private set; }
+
+        public void UpdateImage(float currentHP)
         {
             _image.fillAmount = currentHP / _maxHP;
         }
 
-        public void Dispose()
+        private void OnEnable()
         {
-            _hp.Changed -= UpdateImage;
+            Presenter.OnEnable();
         }
+        
+        private void OnDisable()
+        {
+            Presenter.OnDisable();
+        }
+        
     }
 }

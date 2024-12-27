@@ -1,40 +1,40 @@
 ﻿using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
+using Model.Weapon;
 using UnityEngine;
 
 namespace Damagers.Player.Weapon
 {
     public class ReloadChecker : WeaponChecker
     {
-        private readonly Weapon _weapon;
+        private readonly WeaponPresenter _weaponPresenter;
 
         private bool _isReloading = false;
         
-        public ReloadChecker(Weapon weapon)
+        public ReloadChecker(WeaponPresenter weaponPresenter)
         {
-            _weapon = weapon;
+            _weaponPresenter = weaponPresenter;
         }
 
         public override void Check()
         {
-            if (_weapon.WeaponData.CurrentAmmo <= 0)
+            if (!_weaponPresenter.IsEnoughAmmoToShoot())
             {
                 if (_isReloading == false)
                     Reload().Forget();
-
             }
             else
             {
                 base.Check();
-               // _isReloading = false;
             }
         }
 
         private async UniTaskVoid Reload()
         { 
+            Debug.Log("Reload");
             _isReloading = true;
-            await Task.Delay((int)(_weapon.WeaponData.ReloadingTime * 1000));
-            _weapon.WeaponData.CurrentAmmo = _weapon.WeaponData.AmmoCapacity;
+            await _weaponPresenter.GetReloadTask();
+            _weaponPresenter.Reload();
             _isReloading = false;
         }
     }

@@ -1,39 +1,60 @@
-using Entities.Player;
+using Services.Target;
+using Services.Updater;
 using UnityEngine;
 
-public class WeaponRotator
+namespace Damagers.Player.Weapon.Components.Rotator
 {
-    private readonly PlayerClosestEnemyDetector _enemyDetector;
-    
-    private readonly bool _isFlipped;
-    private readonly Transform _weaponTransform;
-    
-    private Vector2 _target;
-    
-    public WeaponRotator(PlayerClosestEnemyDetector enemyDetector, bool isFlipped, Transform weaponTransform)
+    public class WeaponRotator
     {
-        _enemyDetector = enemyDetector;
-        
-        _isFlipped = isFlipped;
-        _weaponTransform = weaponTransform;
-    }
+        private readonly IUpdaterService _updaterService;
+        private readonly ITargetService _targetService;
     
-    public void Rotate()
-    {
-        var closestEnemy = _enemyDetector.ClosestEnemy;
-
-        if (closestEnemy == null)
-            return;
+        private readonly bool _isFlipped;
+        private readonly Transform _weaponTransform;
+    
+        private Vector2 _target;
+    
+        public WeaponRotator(IUpdaterService updaterService, ITargetService targetService, bool isFlipped, Transform weaponTransform)
+        {
+            _updaterService = updaterService;
+            _targetService = targetService;
         
-        _target = closestEnemy.transform.position;
+            _isFlipped = isFlipped;
+            _weaponTransform = weaponTransform;
+        }
 
-        var direction = _target - (Vector2)_weaponTransform.position;
+        public void OnEnable()
+        {
+            _updaterService.Updated += Update;
+        }
 
-        var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        public void OnDisable()
+        {
+            _updaterService.Updated -= Update;
+        }
 
-        if (_isFlipped)
-            angle -= 180;
+        private void Update()
+        {
+            Rotate();
+        }
         
-        _weaponTransform.rotation = Quaternion.Euler(0, 0, angle);
+        private void Rotate()
+        {
+            var closestEnemy = _targetService.GetTarget();
+            
+            if (closestEnemy == null)
+                return;
+
+            _target = closestEnemy.transform.position;
+
+            var direction = _target - (Vector2)_weaponTransform.position;
+
+            var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+            if (_isFlipped)
+                angle -= 180;
+        
+            _weaponTransform.rotation = Quaternion.Euler(0, 0, angle);
+        }
     }
 }

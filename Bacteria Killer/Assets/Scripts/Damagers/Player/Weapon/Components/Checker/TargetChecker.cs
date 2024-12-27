@@ -1,20 +1,23 @@
-﻿using Entities.Player;
+﻿using Components.Damageable;
+using Services.Target;
 using UnityEngine;
 
 namespace Damagers.Player.Weapon
 {
     public class TargetChecker: WeaponChecker
     {
-        private readonly PlayerClosestEnemyDetector _enemyDetector;
+        private readonly ITargetService _targetService;
         
-        public TargetChecker(PlayerClosestEnemyDetector enemyDetector)
+        public TargetChecker(ITargetService targetService)
         {
-            _enemyDetector = enemyDetector;
+            _targetService = targetService;
         }
         
         public override void Check()
         {
-            if(_enemyDetector.ClosestEnemy != null)
+            var target = _targetService.GetTarget();
+
+            if (target != null && target.TryGetComponent<IDamageable>(out _))
                 base.Check();
         }
     }

@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
 namespace Damagers.Player.Weapon
 {
     public class TerminalChecker : WeaponChecker
     {
-        private readonly Weapon _weapon;
+        private readonly WeaponPresenter _weaponPresenter;
 
         private bool _isCooldownExpired = true;
 
-        public TerminalChecker(Weapon weapon)
+        public TerminalChecker(WeaponPresenter weaponPresenter)
         {
-            _weapon = weapon;
+            _weaponPresenter = weaponPresenter;
         }
 
         public event Action Shooted;
@@ -22,7 +20,7 @@ namespace Damagers.Player.Weapon
         {
             if (_isCooldownExpired)
             {
-                _weapon.WeaponData.CurrentAmmo--;
+                _weaponPresenter.Shoot();
                 _isCooldownExpired = false;
                 WaitNextFire().Forget();
                 Shooted?.Invoke();
@@ -31,7 +29,7 @@ namespace Damagers.Player.Weapon
 
         private async UniTaskVoid WaitNextFire()
         {
-            await Task.Delay((int) (_weapon.WeaponData.FireRate * 1000));
+            await _weaponPresenter.GetFireRateTask();
             _isCooldownExpired = true;
         }
     }
