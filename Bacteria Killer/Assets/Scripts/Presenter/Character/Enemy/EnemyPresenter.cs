@@ -3,11 +3,13 @@ using Configs.Entities;
 using Damagers.Enemy.Attacker;
 using Model.Characters.Enemy;
 using Presenter.HP;
+using Services.Destroyer;
 using Services.Movement.DirectionProvider.Enemy;
 using Services.Movement.Mover;
 using Services.Movement.PositionProvider;
 using Services.Updater;
 using UnityEngine;
+using View.Characters.Enemy;
 
 namespace Presenter.Character.Enemy
 {
@@ -19,10 +21,10 @@ namespace Presenter.Character.Enemy
 
         private readonly EnemyAttacker _enemyAttacker;
         
-        public EnemyPresenter(IUpdaterService updaterService, EnemyConfig enemyConfig, Rigidbody2D rigidbody,
+        public EnemyPresenter(EnemyView enemyView, IUpdaterService updaterService, EnemyConfig enemyConfig, Rigidbody2D rigidbody,
             IPlayerTransformProviderService playerTransformProviderService, Transform enemyTransform,
-            HPPresenter hpPresenter, DamageableComponent damageableComponent) 
-            : base(updaterService, hpPresenter, damageableComponent)
+            HPPresenter hpPresenter, DamageableComponent damageableComponent, IGameObjectDestroyerService gameObjectDestroyerService) 
+            : base(enemyView, updaterService, hpPresenter, damageableComponent, gameObjectDestroyerService)
         {
             _enemyModel = new EnemyModel(enemyConfig);
             

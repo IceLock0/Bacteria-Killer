@@ -10,18 +10,19 @@ namespace View.Characters.Player
     public class PlayerView : CharacterView
     {
         private PlayerConfig _playerConfig;
-        
+
         private PlayerPresenter _playerPresenter;
-        
+
         [Inject]
         public void Initialize(IInputService inputService, PlayerConfig playerConfig)
         {
             _playerConfig = playerConfig;
             CharacterConfig = _playerConfig;
-            
+
             HpView.Initialize(CharacterConfig);
-            
-            _playerPresenter = new PlayerPresenter(UpdaterService, inputService, _playerConfig, Rigidobdy, HpView.Presenter, DamageableComponent);
+
+            _playerPresenter = new PlayerPresenter(this, UpdaterService, inputService, _playerConfig, Rigidobdy,
+                HpView.Presenter, DamageableComponent, GameObjectDestroyerService);
             CharacterPresenter = _playerPresenter;
         }
     }

@@ -1,4 +1,5 @@
-﻿using Model.HP;
+﻿using System;
+using Model.HP;
 using View.HP;
 
 namespace Presenter.HP
@@ -14,9 +15,12 @@ namespace Presenter.HP
             _model = new HPModel(maxHP);
         }
 
+        public event Action Destroyed;
+        
         public void OnEnable()
         {
             _model.Changed += _view.UpdateImage;
+            _model.Died += DestroyEntity;
         }
         
         public void OnDisable()
@@ -27,6 +31,12 @@ namespace Presenter.HP
         public void TakeDamage(float value)
         {
             _model.TakeDamage(value);
+        }
+
+        private void DestroyEntity()
+        {
+            _view.Destroy();
+            Destroyed?.Invoke();
         }
     }
 }

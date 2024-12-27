@@ -1,8 +1,6 @@
-﻿using System;
-using Configs.Wave;
+﻿using Configs.Wave;
 using Services.Fabric.EnemyFabric;
 using UnityEngine;
-using View;
 using View.Characters.Enemy;
 using Random = UnityEngine.Random;
 
@@ -41,17 +39,13 @@ namespace EnemyWaves
             CreateWave();
         }
         
-        public event Action<EnemyView> EnemyDied; 
-        
         public void OnEnable()
         {
-            EnemyDied += _wave.RemoveEnemy;
             _wave.Expired += CreateWave;
         }
 
         public void OnDisable()
         {
-            EnemyDied -= _wave.RemoveEnemy;
             _wave.Expired -= CreateWave;
         }
         

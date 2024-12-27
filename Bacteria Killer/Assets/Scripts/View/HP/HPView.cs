@@ -24,6 +24,11 @@ namespace View.HP
             _image.fillAmount = currentHP / _maxHP;
         }
 
+        public void Destroy()
+        {
+            Debug.Log("</color = red> DEAD </color>");
+        }
+        
         private void OnEnable()
         {
             Presenter.OnEnable();

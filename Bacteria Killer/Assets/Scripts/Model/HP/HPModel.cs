@@ -21,10 +21,10 @@ namespace Model.HP
         {
             _currentHP -= value;
             
-            Changed?.Invoke(_currentHP);
-            
             if (_currentHP <= 0)
                 Died?.Invoke();
+            
+            else Changed?.Invoke(_currentHP);
         }
     }
 }

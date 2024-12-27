@@ -1,4 +1,5 @@
-﻿using Services.Detector;
+﻿using Services.Destroyer;
+using Services.Detector;
 using Services.Fabric.EnemyFabric;
 using Services.Fabric.PlayerFabric;
 using Services.Finder;
@@ -19,6 +20,7 @@ namespace Installers.Scene.Gameplay.Services
             BindPlayerFactoryInstaller();
             BindPlayerPositionProviderService();
             BindUpdaterService();
+            BindGameObjectDestroyerService();
         }
 
         private void BindInputService()
@@ -67,7 +69,17 @@ namespace Installers.Scene.Gameplay.Services
             Container
                 .Bind<IUpdaterService>()
                 .To<UpdaterService>()
-                .FromInstance(FindFirstObjectByType<UpdaterService>())
+                .FromComponentInHierarchy()
+                .AsSingle()
+                .NonLazy();
+        }
+        
+        private void BindGameObjectDestroyerService()
+        {
+            Container
+                .Bind<IGameObjectDestroyerService>()
+                .To<GameObjectDestroyerService>()
+                .FromComponentInHierarchy()
                 .AsSingle()
                 .NonLazy();
         }

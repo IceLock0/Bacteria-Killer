@@ -1,6 +1,7 @@
 ﻿using Components.Damageable;
 using Configs.Entities;
 using Presenter.Character;
+using Services.Destroyer;
 using Services.Updater;
 using UnityEngine;
 using View.HP;
@@ -9,9 +10,10 @@ using Zenject;
 namespace View.Characters
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class CharacterView : MonoBehaviour
+    public abstract class CharacterView : MonoBehaviour
     {
         protected IUpdaterService UpdaterService;
+        protected IGameObjectDestroyerService GameObjectDestroyerService;
         
         protected CharacterPresenter CharacterPresenter;
 
@@ -24,9 +26,10 @@ namespace View.Characters
         protected DamageableComponent DamageableComponent;
 
         [Inject]
-        public void Initialize(IUpdaterService updaterService)
+        public void Initialize(IUpdaterService updaterService, IGameObjectDestroyerService gameObjectDestroyerService)
         {
             UpdaterService = updaterService;
+            GameObjectDestroyerService = gameObjectDestroyerService;
             
             Rigidobdy = GetComponent<Rigidbody2D>();
             Rigidobdy.freezeRotation = true;
