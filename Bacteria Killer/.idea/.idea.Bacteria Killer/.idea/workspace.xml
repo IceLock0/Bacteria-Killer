@@ -4,8 +4,10 @@
     <list default="true" id="ce175cca-be82-4093-94d1-abee388480f2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bacteria Killer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bacteria Killer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenter/Character/CharacterPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presenter/Character/CharacterPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenter/Character/Enemy/EnemyPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presenter/Character/Enemy/EnemyPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenter/Character/Player/PlayerPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presenter/Character/Player/PlayerPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/EnemyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Enemy/EnemyView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/EnemyView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Enemy/EnemyView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/PlayerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Player/PlayerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/PlayerView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Player/PlayerView.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +133,7 @@
       <workItem from="1735121556944" duration="9140000" />
       <workItem from="1735133315271" duration="353000" />
       <workItem from="1735209386272" duration="20373000" />
-      <workItem from="1735297696425" duration="3194000" />
+      <workItem from="1735297696425" duration="6065000" />
     </task>
     <servers />
   </component>
@@ -165,17 +167,17 @@
           <option name="timeStamp" value="9" />
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/View/PlayerView.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Scripts/View/Characters/Player/PlayerView.cs</url>
           <line>24</line>
-          <properties documentPath="D:\Bacteria-Killer\Bacteria Killer\Assets\Scripts\View\PlayerView.cs" initialLine="24" containingFunctionPresentation="method 'Initialize'">
+          <properties documentPath="D:\Bacteria-Killer\Bacteria Killer\Assets\Scripts\View\Characters\Player\PlayerView.cs" initialLine="24" containingFunctionPresentation="method 'Initialize'">
             <startOffsets>
-              <option value="607" />
+              <option value="775" />
             </startOffsets>
             <endOffsets>
-              <option value="608" />
+              <option value="813" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="10" />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

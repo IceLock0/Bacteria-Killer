@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Utils.ResourcesPathes.Player;
 using View;
+using View.Characters.Player;
 using Zenject;
 
 namespace Services.Fabric.PlayerFabric

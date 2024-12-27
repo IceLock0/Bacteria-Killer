@@ -3,6 +3,7 @@ using UnityEngine;
 using Utils.ResourcesPathes.Configs;
 using Utils.ResourcesPathes.Enemy;
 using View;
+using View.Characters.Enemy;
 using Zenject;
 
 namespace Services.Fabric.EnemyFabric

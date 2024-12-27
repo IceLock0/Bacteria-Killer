@@ -34,11 +34,12 @@ namespace Presenter.Character
         public virtual void OnDisable()
         {
             _updaterService.FixedUpdated -= FixedUpdate;
-            _damageableComponent.Damaged += TakeDamage;
+            _damageableComponent.Damaged -= TakeDamage;
         }
 
         private void TakeDamage(float value)
         {
+            Debug.Log($"HpPresenter = {_hpPresenter == null}");
             _hpPresenter.TakeDamage(value);
         }
         

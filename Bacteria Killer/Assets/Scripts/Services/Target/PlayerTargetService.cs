@@ -1,6 +1,7 @@
 ﻿using Services.Detector;
 using UnityEngine;
 using View;
+using View.Characters.Enemy;
 
 namespace Services.Target
 {

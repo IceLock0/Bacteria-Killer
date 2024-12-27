@@ -7,6 +7,7 @@ using Services.Target;
 using Services.Updater;
 using Unity.Mathematics;
 using UnityEngine;
+using View.Characters.Player;
 using Zenject;
 
 namespace View.Weapon

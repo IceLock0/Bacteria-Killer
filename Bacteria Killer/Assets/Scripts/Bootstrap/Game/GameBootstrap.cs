@@ -5,6 +5,7 @@ using Services.Fabric.EnemyFabric;
 using Services.Fabric.PlayerFabric;
 using UnityEngine;
 using View;
+using View.Characters.Player;
 using Zenject;
 
 namespace Bootstrap.Game

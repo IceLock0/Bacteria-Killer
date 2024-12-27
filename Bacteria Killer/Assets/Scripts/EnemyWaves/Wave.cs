@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using View;
+using View.Characters.Enemy;
 
 namespace EnemyWaves
 {

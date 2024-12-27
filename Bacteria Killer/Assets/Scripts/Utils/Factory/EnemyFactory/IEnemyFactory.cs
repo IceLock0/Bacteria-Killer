@@ -1,6 +1,7 @@
 ﻿using Configs.Entities;
 using UnityEngine;
 using View;
+using View.Characters.Enemy;
 
 namespace Services.Fabric.EnemyFabric
 {

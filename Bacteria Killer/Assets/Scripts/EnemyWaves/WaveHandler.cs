@@ -3,6 +3,7 @@ using Configs.Wave;
 using Services.Fabric.EnemyFabric;
 using UnityEngine;
 using View;
+using View.Characters.Enemy;
 using Random = UnityEngine.Random;
 
 namespace EnemyWaves
