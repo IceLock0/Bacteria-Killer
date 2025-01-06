@@ -27,13 +27,14 @@ namespace Presenter.Character.Enemy
             : base(enemyView, updaterService, hpPresenter, damageableComponent, gameObjectDestroyerService)
         {
             _enemyModel = new EnemyModel(enemyConfig);
+            CharacterModel = _enemyModel;
             
             _updaterService = updaterService;
 
             var enemyDirectionProviderService = new EnemyDirectionProviderService(
                 playerTransformProviderService.GetTransform(),
                 enemyTransform, enemyConfig.AttackDistance);
-            MoverService = new MoverService(enemyDirectionProviderService, _enemyModel.LinearSpeed, rigidbody);
+            MoverService = new MoverService(enemyDirectionProviderService, rigidbody);
             
             _enemyAttacker = new EnemyAttacker(playerTransformProviderService.GetTransform(), enemyTransform,
                 _enemyModel.AttackDistance, _enemyModel.AttackDamage);

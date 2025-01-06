@@ -6,6 +6,7 @@ using Services.Finder;
 using Services.Input;
 using Services.Movement.PositionProvider;
 using Services.Updater;
+using Utils.Factory.PillFactory;
 using Zenject;
 
 namespace Installers.Scene.Gameplay.Services
@@ -21,6 +22,15 @@ namespace Installers.Scene.Gameplay.Services
             BindPlayerPositionProviderService();
             BindUpdaterService();
             BindGameObjectDestroyerService();
+            BindPillsFactoryInstaller();
+        }
+
+        private void BindPillsFactoryInstaller()
+        {
+            Container
+                .Bind<IPillFactory>()
+                .To<PillFactory>()
+                .AsSingle();
         }
 
         private void BindInputService()

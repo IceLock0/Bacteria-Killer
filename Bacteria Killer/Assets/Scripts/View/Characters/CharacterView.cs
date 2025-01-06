@@ -15,8 +15,6 @@ namespace View.Characters
         protected IUpdaterService UpdaterService;
         protected IGameObjectDestroyerService GameObjectDestroyerService;
         
-        protected CharacterPresenter CharacterPresenter;
-
         protected CharacterConfig CharacterConfig;
         
         protected Rigidbody2D Rigidobdy;
@@ -40,14 +38,16 @@ namespace View.Characters
             DamageableComponent = GetComponent<DamageableComponent>();
         }
 
+        public CharacterPresenter Presenter { get; protected set; }
+
         private void OnEnable()
         {
-            CharacterPresenter.OnEnable();
+            Presenter.OnEnable();
         }
 
         private void OnDisable()
         {
-            CharacterPresenter.OnDisable();
+            Presenter.OnDisable();
         }
     }
 }

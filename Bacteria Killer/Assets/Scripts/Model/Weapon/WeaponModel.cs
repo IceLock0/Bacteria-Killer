@@ -32,6 +32,16 @@ namespace Model.Weapon
         
         public int CurrentAmmo { get; set; }
 
+        public void IncreaseFireRate(float value)
+        {
+            FireRateMs += (int)(value * 1000);
+        }
+        
+        public void DecreaseFireRate(float value)
+        {
+            FireRateMs -= (int)(value * 1000);
+        }
+        
         public bool IsEnoughAmmoToShoot()
             => CurrentAmmo >= 0;
 

@@ -17,9 +17,7 @@ namespace View.Weapon
         [SerializeField] private bool _isFlipped;
         
         [SerializeField] private Transform _firePoint;
-        
-        private WeaponPresenter _weaponPresenter;
-        
+
         private WeaponRotator _weaponRotator;
 
         private ShootView _shootView;
@@ -29,7 +27,7 @@ namespace View.Weapon
         {
             ITargetService playerTargetService = new PlayerTargetService(closestObjectFindService, playerView.transform);
 
-            _weaponPresenter = new WeaponPresenter(playerTargetService, updaterService, weaponConfig, this);
+            Presenter = new WeaponPresenter(playerTargetService, updaterService, weaponConfig, this);
             
             _weaponRotator = new WeaponRotator(updaterService, playerTargetService, _isFlipped, transform);
 
@@ -38,6 +36,8 @@ namespace View.Weapon
             _shootView = new ShootView(shootPrefab, _firePoint, weaponConfig.ShootConfig.DurationSec);
         }
 
+        public WeaponPresenter Presenter { get; private set; }
+        
         public void ShowShoot(Transform target)
         {
             _shootView.ShowShoot(target);
@@ -45,13 +45,13 @@ namespace View.Weapon
         
         private void OnEnable()
         {
-            _weaponPresenter.OnEnable();
+            Presenter.OnEnable();
             _weaponRotator.OnEnable();
         }
 
         private void OnDisable()
         {
-            _weaponPresenter.OnDisable();
+            Presenter.OnDisable();
             _weaponRotator.OnEnable();
         }
     }

@@ -2,6 +2,6 @@
 {
     public interface IMoverService
     {
-        public void Move(float deltaTime);
+        public void Move(float deltaTime, float speed);
     }
 }

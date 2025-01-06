@@ -194,6 +194,8 @@ MonoBehaviour:
   _playerConfig: {fileID: 11400000, guid: 1ddae1496a3146e4684e8df824787394, type: 2}
   _weaponConfig: {fileID: 11400000, guid: c66f9fa49edc45246a56dcb8d8d51dfc, type: 2}
   _waveConfig: {fileID: 11400000, guid: 80edf43dbd5a0fd458053d0962bf0b59, type: 2}
+  _pillSpawnerConfig: {fileID: 11400000, guid: e37febb0164cbff4db71a1156f521376, type: 2}
+  _pillEffectsConfig: {fileID: 11400000, guid: 98ebf649dc9e7b741843c00d37c2eec3, type: 2}
 --- !u!4 &518377418
 Transform:
   m_ObjectHideFlags: 0

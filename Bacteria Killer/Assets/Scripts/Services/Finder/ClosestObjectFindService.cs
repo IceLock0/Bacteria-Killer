@@ -8,22 +8,32 @@ namespace Services.Finder
     {
         public T GetClosestObjectInBoxByType<T>(Vector2 at, Vector2 size, float angle = 0)
         {
-            T closestObject = default;
-
             var allColliders = Physics2D.OverlapBoxAll(at, size, angle);
 
+            return GetClosestObject<T>(allColliders, at);
+        }
+
+        public T GetClosestObjectInCircleByType<T>(Vector2 at, float radius)
+        {
+            var allColliders = Physics2D.OverlapCircleAll(at, radius);
+
+            return GetClosestObject<T>(allColliders, at);
+        }
+
+        private T GetClosestObject<T>(Collider2D[] allColliders, Vector2 at)
+        {
+            T closestObject = default;
+            
             var filteredColliders = FilterCollidersByType<T>(allColliders);
 
-            var closestCollider = FindClosestCollider(filteredColliders, at);
+            Collider2D closestCollider = FindClosestCollider(filteredColliders, at);
         
             if (closestCollider == null)
                 return default;
             
-            closestObject = closestCollider.GetComponent<T>();
-
-            return closestObject;
+            return closestCollider.GetComponent<T>();
         }
-
+        
         private List<Collider2D> FilterCollidersByType<T>(Collider2D[] allColliders)
         {
             var filteredColliders = new List<Collider2D>();

@@ -1,4 +1,5 @@
 ﻿using Components.Damageable;
+using Model.Characters;
 using Presenter.HP;
 using Services.Destroyer;
 using Services.Movement.Mover;
@@ -21,6 +22,8 @@ namespace Presenter.Character
         private IGameObjectDestroyerService _gameObjectDestroyerService;
 
         protected IMoverService MoverService;
+
+        protected CharacterModel CharacterModel;
 
         public CharacterPresenter(CharacterView characterView, IUpdaterService updaterService, HPPresenter hpPresenter,
             DamageableComponent damageableComponent, IGameObjectDestroyerService gameObjectDestroyerService)
@@ -50,6 +53,16 @@ namespace Presenter.Character
             _hpPresenter.Destroyed -= Destroy;
         }
 
+        public void IncreaseSpeed(float value)
+        {
+            CharacterModel.IncreaseSpeed(value);
+        }
+        
+        public void DecreaseSpeed(float value)
+        {
+            CharacterModel.DecreaseSpeed(value);
+        }
+
         private void TakeDamage(float value)
         {
             _hpPresenter.TakeDamage(value);
@@ -63,7 +76,7 @@ namespace Presenter.Character
 
         private void FixedUpdate()
         {
-            MoverService.Move(Time.fixedDeltaTime);
+            MoverService.Move(Time.fixedDeltaTime, CharacterModel.LinearSpeed);
         }
     }
 }

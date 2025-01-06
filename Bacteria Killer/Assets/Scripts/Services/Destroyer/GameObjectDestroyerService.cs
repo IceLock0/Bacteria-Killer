@@ -9,8 +9,8 @@ namespace Services.Destroyer
 
         public void Destroy(GameObject gameObject)
         {
-            GameObject.Destroy(gameObject);
             Destroyed?.Invoke(gameObject);
+            GameObject.Destroy(gameObject);
         }
     }
 }

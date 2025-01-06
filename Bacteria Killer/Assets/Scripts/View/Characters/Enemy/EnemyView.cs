@@ -32,7 +32,7 @@ namespace View.Characters.Enemy
             _enemyPresenter = new EnemyPresenter(this, UpdaterService, _enemyConfig, Rigidobdy,
                 _playerTransformProviderService, transform, HpView.Presenter, DamageableComponent,
                 GameObjectDestroyerService);
-            CharacterPresenter = _enemyPresenter;
+            Presenter = _enemyPresenter;
         }
     }
 }

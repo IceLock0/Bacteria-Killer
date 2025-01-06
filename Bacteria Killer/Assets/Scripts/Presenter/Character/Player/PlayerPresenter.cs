@@ -21,9 +21,10 @@ namespace Presenter.Character.Player
             : base(playerView, updaterService, hpPresenter, damageableComponent, gameObjectDestroyerService)
         {
             _playerModel = new PlayerModel(playerConfig);
+            CharacterModel = _playerModel;
             
             var playerDirectionProviderService = new PlayerDirectionProviderService(inputService);
-            MoverService = new MoverService(playerDirectionProviderService, _playerModel.LinearSpeed, rigidbody);
+            MoverService = new MoverService(playerDirectionProviderService, rigidbody);
         }
     }
 }

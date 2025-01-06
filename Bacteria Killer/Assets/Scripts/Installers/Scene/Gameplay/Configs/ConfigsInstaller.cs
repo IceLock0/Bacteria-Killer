@@ -1,4 +1,6 @@
 ﻿using Configs;
+using Configs.PillEffects;
+using Configs.PillSpawn;
 using Configs.Wave;
 using Configs.Weapon;
 using UnityEngine;
@@ -11,12 +13,32 @@ namespace Installers.Configs
         [SerializeField] private PlayerConfig _playerConfig;
         [SerializeField] private WeaponConfig _weaponConfig;
         [SerializeField] private WaveConfig _waveConfig;
+        [SerializeField] private PillSpawnerConfig _pillSpawnerConfig;
+        [SerializeField] private PillEffectsConfig _pillEffectsConfig;
         
         public override void InstallBindings()
         {
             BindPlayerConfig();
             BindWeaponConfig();
             BindWaveConfig();
+            BindPillsSpawnerConfig();
+            BindPillEffectsConfig();
+        }
+
+        private void BindPillEffectsConfig()
+        {
+            Container
+                .Bind<PillEffectsConfig>()
+                .FromInstance(_pillEffectsConfig)
+                .AsSingle();
+        }
+
+        private void BindPillsSpawnerConfig()
+        {
+            Container
+                .Bind<PillSpawnerConfig>()
+                .FromInstance(_pillSpawnerConfig)
+                .AsSingle();
         }
 
         private void BindPlayerConfig()

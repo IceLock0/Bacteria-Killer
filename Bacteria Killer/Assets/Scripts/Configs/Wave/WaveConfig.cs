@@ -2,7 +2,7 @@
 
 namespace Configs.Wave
 {
-    [CreateAssetMenu(fileName = "Wave Config", menuName = "Configs/Wave", order = 0)]
+    [CreateAssetMenu(fileName = "Wave Config", menuName = "Configs/Spawners/Wave", order = 0)]
     public class WaveConfig : ScriptableObject
     {
         [SerializeField] private float _startDifficult;

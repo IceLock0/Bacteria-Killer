@@ -33,6 +33,11 @@ namespace Presenter.HP
             _model.TakeDamage(value);
         }
 
+        public void Heal(float value)
+        {
+            _model.Heal(value);
+        }
+        
         private void DestroyEntity()
         {
             _view.Destroy();

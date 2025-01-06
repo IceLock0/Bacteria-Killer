@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 using Model.Weapon;
 using Services.Target;
 using Services.Updater;
+using UnityEngine;
 using View.Weapon;
 
 namespace Damagers.Player.Weapon
@@ -43,6 +44,16 @@ namespace Damagers.Player.Weapon
             _updaterService.Updated -= Update;
         }
 
+        public void IncreaseFireRate(float value)
+        {
+            _weaponModel.IncreaseFireRate(value);
+        }
+        
+        public void DecreaseFireRate(float value)
+        {
+            _weaponModel.DecreaseFireRate(value);
+        }
+        
         public bool IsEnoughAmmoToShoot()
             => _weaponModel.IsEnoughAmmoToShoot();
 
@@ -53,8 +64,9 @@ namespace Damagers.Player.Weapon
             => UniTask.Delay(_weaponModel.ReloadingTimeMs);
 
         public UniTask GetFireRateTask()
-            => UniTask.Delay(_weaponModel.FireRateMs);
-        
+             => UniTask.Delay(_weaponModel.FireRateMs);
+
+            
         public void Shoot()
             => _weaponModel.Shoot();
 

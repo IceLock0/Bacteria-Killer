@@ -23,7 +23,7 @@ namespace View.Characters.Player
 
             _playerPresenter = new PlayerPresenter(this, UpdaterService, inputService, _playerConfig, Rigidobdy,
                 HpView.Presenter, DamageableComponent, GameObjectDestroyerService);
-            CharacterPresenter = _playerPresenter;
+            Presenter = _playerPresenter;
         }
     }
 }

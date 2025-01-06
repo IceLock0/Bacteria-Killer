@@ -21,6 +21,9 @@ namespace View.Weapon
         
         public void ShowShoot(Transform target)
         {
+            if (_shootPrefab == null)
+                return;
+            
             CreateShoot(target).Forget();
         }
 

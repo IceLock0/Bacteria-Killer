@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42c1640e09a4983b3e3302d68cca30c, type: 3}
+  m_Name: PillEffects
+  m_EditorClassIdentifier: 
+  _pillDecreaseFireRateEffectConfig: {fileID: 11400000, guid: b76c40717c8c86e4ea96ea30c696081d, type: 2}
+  _pillIncreaseSpeedEffectConfig: {fileID: 11400000, guid: 011e9b94381cb1e4b904eda21dfef4d8, type: 2}
+  _pillHealHpEffectConfig: {fileID: 11400000, guid: 9830e6130ccff564284d82816fecc0e7, type: 2}
+  _pillShockWaveEffectConfig: {fileID: 11400000, guid: 6aa03277f9522fb4898935854a7914e5, type: 2}

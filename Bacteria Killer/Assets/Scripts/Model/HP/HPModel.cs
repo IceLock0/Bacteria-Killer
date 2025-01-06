@@ -26,5 +26,11 @@ namespace Model.HP
             
             else Changed?.Invoke(_currentHP);
         }
+
+        public void Heal(float value)
+        {
+            _currentHP = Mathf.Clamp(_currentHP, _currentHP + value, _maxHP);
+            Changed?.Invoke(_currentHP);
+        }
     }
 }

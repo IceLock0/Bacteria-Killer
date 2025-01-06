@@ -2,6 +2,7 @@
 using Services.Destroyer;
 using Services.Fabric.EnemyFabric;
 using UnityEngine;
+using Utils.RandomPosition;
 using View.Characters.Enemy;
 using Random = UnityEngine.Random;
 
@@ -58,8 +59,6 @@ namespace EnemyWaves
 
         public void HandleRemoveEnemy(GameObject gameObject)
         {
-            Debug.Log("Handle");
-            
             if(gameObject.TryGetComponent<EnemyView>(out var enemyView))
                 _wave.RemoveEnemy(enemyView);
         }
@@ -96,29 +95,10 @@ namespace EnemyWaves
             return difficult;
         }
 
-        private Vector2 GetRandomEnemyPosition()
-        {
-            var minDistance = _minSpawnDistance;
-            var maxDistance = _maxSpawnDistance;
-            
-            var offsetX = Random.Range(-maxDistance, maxDistance);
-            var offsetY = Random.Range(-maxDistance, maxDistance);
-            
-            while (Mathf.Abs(offsetX) < minDistance || Mathf.Abs(offsetY) < minDistance)
-            {
-                offsetX = Random.Range(-maxDistance, maxDistance);
-                offsetY = Random.Range(-maxDistance, maxDistance);
-            }
-
-            var offsetVector2 = new Vector2(offsetX, offsetY);
-
-            return (Vector2)_playerTransform.position + offsetVector2;
-        }
-
         private EnemyView CreateEnemy(out float resultDifficult)
         {
             var targetDifficult = GetRandomEnemyDifficult();
-            var position = GetRandomEnemyPosition();
+            var position = RandomPositionHandler.GetRandomPosition(_playerTransform.position, _minSpawnDistance, _maxSpawnDistance);
             
             EnemyView enemy = _factory.Create(targetDifficult, position, Quaternion.identity, out var resultConfig);
 

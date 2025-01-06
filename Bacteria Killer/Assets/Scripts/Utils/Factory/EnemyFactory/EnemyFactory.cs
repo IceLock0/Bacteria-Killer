@@ -10,12 +10,12 @@ namespace Services.Fabric.EnemyFabric
 {
     public class EnemyFactory : IEnemyFactory
     {
+        private readonly DiContainer _container;
+        
         private EnemyView[] _enemies;
         
         private EnemyConfig[] _configs;
         
-        private DiContainer _container;
-
         public EnemyFactory(DiContainer container)
         {
             _container = container;
