@@ -1,5 +1,6 @@
 ﻿using Configs.Entities;
 using Presenter.HP;
+using Services.Upgrade;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,25 +9,23 @@ namespace View.HP
     public class HPView : MonoBehaviour
     {
         private Image _image;
-        private float _maxHP;
-        
-        public void Initialize(CharacterConfig characterConfig)
+
+        public void Initialize(CharacterConfig characterConfig, IPlayerUpgradeProviderService playerUpgradeProviderService, bool isPlayer = false)
         {
-            _maxHP = characterConfig.MaxHp;
             _image = GetComponentInChildren<Image>();
-            Presenter = new HPPresenter(this, _maxHP);
+            Presenter = new HPPresenter(this, characterConfig, playerUpgradeProviderService, isPlayer);
         }
 
         public HPPresenter Presenter { get; private set; }
 
-        public void UpdateImage(float currentHP)
+        public void UpdateImage(float currentHP, float maxHp)
         {
-            _image.fillAmount = currentHP / _maxHP;
+            _image.fillAmount = currentHP / maxHp;
         }
 
         public void Destroy()
         {
-            Debug.Log("</color = red> DEAD </color>");
+            //blood
         }
         
         private void OnEnable()

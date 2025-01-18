@@ -1,4 +1,6 @@
-﻿using Configs;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Configs;
 using Configs.PillEffects;
 using Configs.PillSpawn;
 using Configs.Wave;
@@ -6,9 +8,14 @@ using EnemyWaves;
 using Services.Destroyer;
 using Services.Fabric.EnemyFabric;
 using Services.Fabric.PlayerFabric;
+using Services.Upgrade;
 using UnityEngine;
+using UnityEngine.UI;
 using Utils.Factory.PillFactory;
+using Utils.Factory.UI;
 using View.Characters.Player;
+using View.Characters.Player.Level;
+using View.Characters.Player.Upgrade;
 using Zenject;
 
 namespace Bootstrap.Game
@@ -32,10 +39,18 @@ namespace Bootstrap.Game
         private PillSpawnerConfig _pillSpawnerConfig;
         private PillEffectsConfig _pillEffectsConfig;
 
+        private IUIFactory _uiFactory;
+        private IUpgradeViewFactory _upgradeViewFactory;
+        private Canvas _rootCanvas;
+        private List<PlayerUpgradeView> _upgradeViews;
+
+        private IPlayerUpgradeProviderService _playerUpgradeProviderService;
+        
         [Inject]
         public void Initialize(IPlayerFactory playerFactory, PlayerConfig playerConfig, IEnemyFactory enemyFactory,
             WaveConfig waveConfig, IGameObjectDestroyerService gameObjectDestroyerService, IPillFactory pillFactory,
-            PillSpawnerConfig pillSpawnerConfig, PillEffectsConfig pillEffectsConfig)
+            PillSpawnerConfig pillSpawnerConfig, PillEffectsConfig pillEffectsConfig, IUIFactory uiFactory,
+            IUpgradeViewFactory upgradeViewFactory, IPlayerUpgradeProviderService playerUpgradeProviderService)
         {
             _playerFactory = playerFactory;
             _playerConfig = playerConfig;
@@ -48,10 +63,19 @@ namespace Bootstrap.Game
             _pillFactory = pillFactory;
             _pillSpawnerConfig = pillSpawnerConfig;
             _pillEffectsConfig = pillEffectsConfig;
+
+            _uiFactory = uiFactory;
+            _upgradeViewFactory = upgradeViewFactory;
+
+            _playerUpgradeProviderService = playerUpgradeProviderService;
         }
 
         private void Awake()
         {
+            CreateUI();
+
+            CreateUpgradeViewsAndInitUpgradeService();
+
             CreatePlayer();
 
             CreateWaveHandler();
@@ -69,12 +93,36 @@ namespace Bootstrap.Game
         {
             _waveHandler.OnDisable();
             _pillSpawner.OnDisable();
+            
+            foreach (PlayerUpgradeView playerUpgradeView in _upgradeViews)
+            {
+                _playerUpgradeProviderService.UnregisterPresenter(playerUpgradeView.PlayerUpgradePresenter);
+            }
+        }
+
+        private void CreateUI()
+        {
+            _rootCanvas = _uiFactory.CreateCanvas();
+        }
+
+        private void CreateUpgradeViewsAndInitUpgradeService()
+        {
+            var playerLevelRoot = _rootCanvas.GetComponentInChildren<PlayerLevelView>();
+            var upgradesRoot = playerLevelRoot.GetComponentInChildren<VerticalLayoutGroup>();
+            
+            _upgradeViews = _upgradeViewFactory.CreateUpgradeViews(upgradesRoot.transform);
+
+            foreach (PlayerUpgradeView playerUpgradeView in _upgradeViews)
+            {
+                _playerUpgradeProviderService.RegisterPresenter(playerUpgradeView.PlayerUpgradePresenter);
+            }
         }
 
         private void CreatePlayer()
         {
             _playerView = _playerFactory.Create(_playerConfig.SpawnPosition, Quaternion.identity);
         }
+
 
         private void CreateWaveHandler()
         {

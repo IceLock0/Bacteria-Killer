@@ -57,7 +57,7 @@ namespace EnemyWaves
             _wave.Expired -= CreateWave;
         }
 
-        public void HandleRemoveEnemy(GameObject gameObject)
+        private void HandleRemoveEnemy(GameObject gameObject)
         {
             if(gameObject.TryGetComponent<EnemyView>(out var enemyView))
                 _wave.RemoveEnemy(enemyView);
@@ -65,7 +65,6 @@ namespace EnemyWaves
         
         private void CreateWave()
         {
-            Debug.Log($"WaveDifficult for create = {_nextDifficult}");
             while (_usedDifficult < _nextDifficult)
             {
                 AddEnemyToWave();
@@ -98,7 +97,7 @@ namespace EnemyWaves
         private EnemyView CreateEnemy(out float resultDifficult)
         {
             var targetDifficult = GetRandomEnemyDifficult();
-            var position = RandomPositionHandler.GetRandomPosition(_playerTransform.position, _minSpawnDistance, _maxSpawnDistance);
+            Vector2 position = RandomPositionHandler.GetRandomPosition(_playerTransform.position, _minSpawnDistance, _maxSpawnDistance);
             
             EnemyView enemy = _factory.Create(targetDifficult, position, Quaternion.identity, out var resultConfig);
 

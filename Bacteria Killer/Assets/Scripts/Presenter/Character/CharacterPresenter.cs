@@ -11,7 +11,7 @@ namespace Presenter.Character
 {
     public abstract class CharacterPresenter
     {
-        private CharacterView _characterView;
+        private readonly CharacterView _characterView;
 
         private readonly IUpdaterService _updaterService;
 
@@ -19,7 +19,7 @@ namespace Presenter.Character
 
         private readonly DamageableComponent _damageableComponent;
 
-        private IGameObjectDestroyerService _gameObjectDestroyerService;
+        private readonly IGameObjectDestroyerService _gameObjectDestroyerService;
 
         protected IMoverService MoverService;
 
@@ -57,7 +57,7 @@ namespace Presenter.Character
         {
             CharacterModel.IncreaseSpeed(value);
         }
-        
+
         public void DecreaseSpeed(float value)
         {
             CharacterModel.DecreaseSpeed(value);

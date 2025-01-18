@@ -4,9 +4,12 @@ using Services.Fabric.EnemyFabric;
 using Services.Fabric.PlayerFabric;
 using Services.Finder;
 using Services.Input;
+using Services.Level;
 using Services.Movement.PositionProvider;
 using Services.Updater;
+using Services.Upgrade;
 using Utils.Factory.PillFactory;
+using Utils.Factory.UI;
 using Zenject;
 
 namespace Installers.Scene.Gameplay.Services
@@ -23,6 +26,42 @@ namespace Installers.Scene.Gameplay.Services
             BindUpdaterService();
             BindGameObjectDestroyerService();
             BindPillsFactoryInstaller();
+            BindPlayerUnspentLevelsProviderService();
+            BindUIFactory();
+            BindUpgradeViewFactory();
+            BindPlayerUpgradeProviderService();
+        }
+
+        private void BindPlayerUpgradeProviderService()
+        {
+            Container
+                .Bind<IPlayerUpgradeProviderService>()
+                .To<PlayerUpgradeProviderService>()
+                .AsSingle();
+        }
+
+        private void BindUpgradeViewFactory()
+        {
+            Container
+                .Bind<IUpgradeViewFactory>()
+                .To<UpgradeViewFactory>()
+                .AsSingle();
+        }
+        
+        private void BindUIFactory()
+        {
+            Container
+                .Bind<IUIFactory>()
+                .To<UIFactory>()
+                .AsSingle();
+        }
+
+        private void BindPlayerUnspentLevelsProviderService()
+        {
+            Container
+                .Bind<IPlayerUnspentLevelsProviderService>()
+                .To<PlayerUnspentLevelsProviderService>()
+                .AsSingle();
         }
 
         private void BindPillsFactoryInstaller()
@@ -83,7 +122,7 @@ namespace Installers.Scene.Gameplay.Services
                 .AsSingle()
                 .NonLazy();
         }
-        
+
         private void BindGameObjectDestroyerService()
         {
             Container

@@ -1,12 +1,10 @@
 ﻿using Configs.Entities;
+using UnityEngine;
 
 namespace Model.Characters
 {
     public abstract class CharacterModel
     {
-        private float _linearSpeed;
-        private float _maxHp;
-        
         public CharacterModel(CharacterConfig characterConfig)
         {
             LinearSpeed = characterConfig.LinearSpeed;

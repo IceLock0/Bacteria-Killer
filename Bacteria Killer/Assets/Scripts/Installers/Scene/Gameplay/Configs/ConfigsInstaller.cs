@@ -1,4 +1,5 @@
 ﻿using Configs;
+using Configs.Level;
 using Configs.PillEffects;
 using Configs.PillSpawn;
 using Configs.Wave;
@@ -15,6 +16,7 @@ namespace Installers.Configs
         [SerializeField] private WaveConfig _waveConfig;
         [SerializeField] private PillSpawnerConfig _pillSpawnerConfig;
         [SerializeField] private PillEffectsConfig _pillEffectsConfig;
+        [SerializeField] private PlayerLevelConfig _playerLevelConfig;
         
         public override void InstallBindings()
         {
@@ -23,6 +25,15 @@ namespace Installers.Configs
             BindWaveConfig();
             BindPillsSpawnerConfig();
             BindPillEffectsConfig();
+            BindPlayerLevelConfig();
+        }
+
+        private void BindPlayerLevelConfig()
+        {
+            Container
+                .Bind<PlayerLevelConfig>()
+                .FromInstance(_playerLevelConfig)
+                .AsSingle();
         }
 
         private void BindPillEffectsConfig()

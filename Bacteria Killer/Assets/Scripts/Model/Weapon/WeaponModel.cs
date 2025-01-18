@@ -32,6 +32,11 @@ namespace Model.Weapon
         
         public int CurrentAmmo { get; set; }
 
+        public void IncreaseDamage(float value)
+        {
+            Damage += value;
+        }
+        
         public void IncreaseFireRate(float value)
         {
             FireRateMs += (int)(value * 1000);

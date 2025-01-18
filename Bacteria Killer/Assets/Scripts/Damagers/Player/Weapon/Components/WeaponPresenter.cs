@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 using Model.Weapon;
 using Services.Target;
 using Services.Updater;
+using Services.Upgrade;
 using UnityEngine;
 using View.Weapon;
 
@@ -18,8 +19,10 @@ namespace Damagers.Player.Weapon
 
         private readonly WeaponShootSystem _weaponShootSystem;
 
+        private readonly IPlayerUpgradeProviderService _playerUpgradeProviderService;
+        
         public WeaponPresenter(ITargetService targetService , IUpdaterService updaterService, WeaponConfig weaponConfig,
-            WeaponView weaponView)
+            WeaponView weaponView, IPlayerUpgradeProviderService playerUpgradeProviderService)
         {
             _targetService = targetService;
             _updaterService = updaterService;
@@ -28,6 +31,8 @@ namespace Damagers.Player.Weapon
             _weaponView = weaponView;
 
             _weaponShootSystem = new WeaponShootSystem(this, _targetService);
+            
+            _playerUpgradeProviderService = playerUpgradeProviderService;
         }
 
         public void OnEnable()
@@ -35,6 +40,8 @@ namespace Damagers.Player.Weapon
             _weaponShootSystem.OnEnable();
             _weaponShootSystem.TargetShooted += _weaponView.ShowShoot;
             _updaterService.Updated += Update;
+
+            _playerUpgradeProviderService.DamageUpgraded += IncreaseDamage;
         }
 
         public void OnDisable()
@@ -42,6 +49,8 @@ namespace Damagers.Player.Weapon
             _weaponShootSystem.OnDisable();
             _weaponShootSystem.TargetShooted -= _weaponView.ShowShoot;
             _updaterService.Updated -= Update;
+            
+            _playerUpgradeProviderService.DamageUpgraded -= IncreaseDamage;
         }
 
         public void IncreaseFireRate(float value)
@@ -72,6 +81,12 @@ namespace Damagers.Player.Weapon
 
         public float GetDamage()
             => _weaponModel.Damage;
+
+        private void IncreaseDamage(float value)
+        {
+            Debug.Log("Increase Damage");
+            _weaponModel.IncreaseDamage(value);
+        }
         
         private void Update()
         {

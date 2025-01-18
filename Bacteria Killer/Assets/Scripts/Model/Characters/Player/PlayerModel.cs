@@ -8,6 +8,5 @@ namespace Model.Characters.Player
         {
             
         }
-        
     }
 }

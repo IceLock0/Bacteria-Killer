@@ -5,7 +5,7 @@ namespace Model.HP
 {
     public class HPModel
     {
-        private readonly float _maxHP;
+        private float _maxHP;
         private float _currentHP;
 
         public HPModel(float maxHP)
@@ -14,7 +14,7 @@ namespace Model.HP
             _currentHP = _maxHP;
         }
         
-        public event Action<float> Changed;
+        public event Action<float, float> Changed;
         public event Action Died;
 
         public void TakeDamage(float value)
@@ -24,13 +24,19 @@ namespace Model.HP
             if (_currentHP <= 0)
                 Died?.Invoke();
             
-            else Changed?.Invoke(_currentHP);
+            else Changed?.Invoke(_currentHP, _maxHP);
         }
 
         public void Heal(float value)
         {
             _currentHP = Mathf.Clamp(_currentHP, _currentHP + value, _maxHP);
-            Changed?.Invoke(_currentHP);
+            Changed?.Invoke(_currentHP, _maxHP);
+        }
+
+        public void IncreaseMaxHp(float value)
+        {
+            _maxHP += value;
+            Changed?.Invoke(_currentHP, _maxHP);
         }
     }
 }
