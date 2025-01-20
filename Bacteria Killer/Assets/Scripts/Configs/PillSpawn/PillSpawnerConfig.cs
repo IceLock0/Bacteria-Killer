@@ -9,7 +9,7 @@ namespace Configs.PillSpawn
 
         [SerializeField] private float _minDistance;
         [SerializeField] private float _maxDistance;
-        
+
         public int MaxPills => _maxPills;
 
         public float MinDistance => _minDistance;

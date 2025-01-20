@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9685ddbd433742f195197035f7eb1d6a, type: 3}
   m_Name: PlayerLevel
   m_EditorClassIdentifier: 
-  _maxLevel: 30
+  _maxLevel: 18
   _xpFactorPercent: 1
   _startXpTarget: 5

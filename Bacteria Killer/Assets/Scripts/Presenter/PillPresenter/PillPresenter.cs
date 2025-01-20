@@ -1,8 +1,11 @@
 ﻿using System.Collections.Generic;
 using Components.Collectable;
+using Configs.PillSpawn;
 using Model.Pill;
 using PillEffects;
 using Services.Destroyer;
+using Services.Movement.PositionProvider;
+using Services.Updater;
 using UnityEngine;
 using View.Characters.Player;
 using View.Pill;
@@ -17,8 +20,16 @@ namespace Presenter.PillPresenter
         private readonly CollectableComponent _collectableComponent;
 
         private readonly IGameObjectDestroyerService _gameObjectDestroyerService;
+
+        private readonly IUpdaterService _updaterService;
+
+        private readonly float _aliveDistance;
         
-        public PillPresenter(PillView pillView, List<IPillEffect> effects, CollectableComponent collectableComponent, IGameObjectDestroyerService gameObjectDestroyerService)
+        private readonly Transform _playerTransform;
+        
+        public PillPresenter(PillView pillView, List<IPillEffect> effects, CollectableComponent collectableComponent,
+            IGameObjectDestroyerService gameObjectDestroyerService,
+            IPlayerTransformProviderService playerTransformProviderService, IUpdaterService updaterService, float aliveDistance)
         {
             _pillModel = new PillModel(effects);
             _pillView = pillView;
@@ -26,6 +37,37 @@ namespace Presenter.PillPresenter
             _collectableComponent = collectableComponent;
 
             _gameObjectDestroyerService = gameObjectDestroyerService;
+
+            _updaterService = updaterService;
+
+            _aliveDistance = aliveDistance;
+            
+            _playerTransform = playerTransformProviderService.GetTransform();
+        }
+        
+        public void OnEnable()
+        {
+            _collectableComponent.Collected += Collect;
+            _updaterService.Updated += Update;
+        }
+
+        public void OnDisable()
+        {
+            _collectableComponent.Collected -= Collect;
+            _updaterService.Updated -= Update;
+        }
+
+        private void Update()
+        {
+            CheckDistanceToPlayer();
+        }
+
+        private void CheckDistanceToPlayer()
+        {
+            if (Vector2.Distance(_playerTransform.position, _pillView.transform.position) > _aliveDistance)
+            {
+                _gameObjectDestroyerService.Destroy(_pillView.gameObject);
+            }
         }
 
         private void Collect(Collider2D collider)
@@ -37,19 +79,8 @@ namespace Presenter.PillPresenter
             {
                 effect.Apply(collider);
             }
-            
-            _gameObjectDestroyerService.Destroy(_pillView.gameObject);
-        }
-        
-        public void OnEnable()
-        {
-            _collectableComponent.Collected += Collect;
-        }
 
-        public void OnDisable()
-        {
-            
-            _collectableComponent.Collected -= Collect;
+            _gameObjectDestroyerService.Destroy(_pillView.gameObject);
         }
     }
 }
