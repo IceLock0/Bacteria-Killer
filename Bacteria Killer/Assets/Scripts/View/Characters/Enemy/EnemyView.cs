@@ -1,6 +1,5 @@
 ﻿using Configs.Entities;
 using Presenter.Character.Enemy;
-using Services.Destroyer;
 using Services.Movement.PositionProvider;
 using Services.Upgrade;
 using UnityEngine;
@@ -13,11 +12,11 @@ namespace View.Characters.Enemy
     {
         private IPlayerTransformProviderService _playerTransformProviderService;
 
-        private EnemyConfig _enemyConfig;
-
         private EnemyPresenter _enemyPresenter;
 
         private IPlayerUpgradeProviderService _playerUpgradeProviderService;
+        
+        public EnemyConfig EnemyConfig;
         
         [Inject]
         public void Initialize(IPlayerTransformProviderService playerTransformProviderService, IPlayerUpgradeProviderService playerUpgradeProviderService)
@@ -28,12 +27,12 @@ namespace View.Characters.Enemy
         
         public void InitializeByFabric(EnemyConfig enemyConfig)
         {
-            _enemyConfig = enemyConfig;
-            CharacterConfig = _enemyConfig;
+            EnemyConfig = enemyConfig;
+            CharacterConfig = EnemyConfig;
 
             HpView.Initialize(CharacterConfig, _playerUpgradeProviderService);
 
-            _enemyPresenter = new EnemyPresenter(this, UpdaterService, _enemyConfig, Rigidobdy,
+            _enemyPresenter = new EnemyPresenter(this, UpdaterService, EnemyConfig, Rigidobdy,
                 _playerTransformProviderService, transform, HpView.Presenter, DamageableComponent,
                 GameObjectDestroyerService);
             Presenter = _enemyPresenter;

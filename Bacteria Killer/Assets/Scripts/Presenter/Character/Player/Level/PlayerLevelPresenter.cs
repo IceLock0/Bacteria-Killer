@@ -3,6 +3,7 @@ using Model.Characters.Player.Level;
 using Services.Destroyer;
 using Services.Level;
 using UnityEngine;
+using Utils.XpCalculator;
 using View.Characters.Enemy;
 using View.Characters.Player.Level;
 
@@ -13,6 +14,8 @@ namespace Presenter.Character.Player.Level
         private readonly PlayerLevelModel _playerLevelModel;
         private readonly PlayerLevelView _playerLevelView;
 
+        private readonly PlayerLevelConfig _playerLevelConfig;
+        
         private readonly IGameObjectDestroyerService _gameObjectDestroyerService;
         
         private readonly IPlayerUnspentLevelsProviderService _playerUnspentLevelsProviderService;
@@ -23,7 +26,8 @@ namespace Presenter.Character.Player.Level
         {
             _playerLevelView = playerLevelView;
 
-            _playerLevelModel = new PlayerLevelModel(playerLevelConfig);
+            _playerLevelConfig = playerLevelConfig;
+            _playerLevelModel = new PlayerLevelModel(_playerLevelConfig);
 
             _gameObjectDestroyerService = gameObjectDestroyerService;
             _playerUnspentLevelsProviderService = playerUnspentLevelsProviderService;
@@ -63,10 +67,16 @@ namespace Presenter.Character.Player.Level
         
         private void HandleEnemyDestroy(GameObject gameObject)
         {
-            if (!gameObject.TryGetComponent<EnemyView>(out _))
+            if (!gameObject.TryGetComponent<EnemyView>(out var enemy))
                 return;
 
-            AddXp(20);
+            var enemyDifficult = enemy.EnemyConfig.Difficult;
+            
+            var xp = XpCalculator.CalculateXpForEnemy(_playerLevelConfig.EnemyXpConfig.BaseXp, _playerLevelConfig.EnemyXpConfig.ScaleValue, enemyDifficult);
+            
+            Debug.Log($"Xp {xp}");
+            
+            AddXp(xp);
         }
     }
 }

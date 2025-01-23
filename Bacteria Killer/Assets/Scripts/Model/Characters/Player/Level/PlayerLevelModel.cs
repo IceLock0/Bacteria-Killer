@@ -1,5 +1,6 @@
 ﻿using System;
 using Configs.Level;
+using Utils.XpCalculator;
 
 namespace Model.Characters.Player.Level
 {
@@ -8,18 +9,20 @@ namespace Model.Characters.Player.Level
         private readonly int _maxLevel;
         private int _currentLevel;
 
-        private readonly float _xpFactor;
+        private readonly float _scaleValue;
 
+        private readonly float _baseXp;
         private float _targetXp;
         private float _currentXp;
 
         public PlayerLevelModel(PlayerLevelConfig playerLevelConfig)
         {
             _maxLevel = playerLevelConfig.MaxLevel;
-            _xpFactor = playerLevelConfig.XpFactorPercent / 100.0f;
+            _scaleValue = playerLevelConfig.ScaleValue;
 
             _currentLevel = 0;
-            _targetXp = playerLevelConfig.StartXpTarget;
+            _baseXp = playerLevelConfig.BaseXp;
+            _targetXp = _baseXp;
             _currentXp = 0.0f;
         }
 
@@ -43,10 +46,9 @@ namespace Model.Characters.Player.Level
             XpChanged?.Invoke(_currentXp, _targetXp);
         }
 
-        private void ChangeXp()
+        private bool IsLevelUp()
         {
-            _currentXp -= _targetXp;
-            _targetXp += _targetXp * _xpFactor;
+            return _currentXp >= _targetXp;
         }
         
         private void IncreaseLevel()
@@ -58,10 +60,17 @@ namespace Model.Characters.Player.Level
 
             Upped?.Invoke();
         }
-
-        private bool IsLevelUp()
+        
+        private void ChangeXp()
         {
-            return _currentXp >= _targetXp;
+            _currentXp -= _targetXp;
+            _targetXp = GetNextTargetXp();
         }
+
+        private float GetNextTargetXp()
+        {
+            return XpCalculator.CalculateTargetLevelXp(_baseXp, _scaleValue, _currentLevel);
+        }
+        
     }
 }

@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9685ddbd433742f195197035f7eb1d6a, type: 3}
-  m_Name: PlayerLevel
+  m_Script: {fileID: 11500000, guid: 72c53711724e40a7a93cec86d96a7bb6, type: 3}
+  m_Name: EnemyXp
   m_EditorClassIdentifier: 
-  _maxLevel: 18
-  _scaleValue: 1.5
-  _baseXp: 15
-  _enemyXpConfig: {fileID: 11400000, guid: 0cc18858cd733ee4b99b9374c77327eb, type: 2}
+  _baseXp: 1
+  _scaleValue: 1.2

@@ -22,8 +22,6 @@ namespace Services.Finder
 
         private T GetClosestObject<T>(Collider2D[] allColliders, Vector2 at)
         {
-            T closestObject = default;
-            
             var filteredColliders = FilterCollidersByType<T>(allColliders);
 
             Collider2D closestCollider = FindClosestCollider(filteredColliders, at);

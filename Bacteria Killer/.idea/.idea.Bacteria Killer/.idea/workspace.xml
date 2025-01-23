@@ -4,10 +4,14 @@
     <list default="true" id="ce175cca-be82-4093-94d1-abee388480f2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bacteria Killer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bacteria Killer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Player/Level/PlayerLevel.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Player/Level/PlayerLevel.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Configs/PillSpawn/PillSpawnerConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Configs/PillSpawn/PillSpawnerConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenter/PillPresenter/PillPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presenter/PillPresenter/PillPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Pill/PillView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Pill/PillView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UpgradeFilling.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UpgradeFilling.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Upgrades/Damage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Upgrades/Damage.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Upgrades/Hp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Upgrades/Hp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Upgrades/Speed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Upgrades/Speed.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Configs/Characters/Player/Level/PlayerLevelConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Configs/Characters/Player/Level/PlayerLevelConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Characters/Player/Level/PlayerLevelModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Characters/Player/Level/PlayerLevelModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenter/Character/Player/Level/PlayerLevelPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presenter/Character/Player/Level/PlayerLevelPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Finder/ClosestObjectFindService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Finder/ClosestObjectFindService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Enemy/EnemyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Enemy/EnemyView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +38,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/240ff6271d47469a95269de220922c381dba00/5e/1055a284/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ide.visualstudio@2.0.22/Editor/Image.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Runtime/Data/UniversalRenderPipelineAsset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ide.visualstudio@2.0.22/Editor/UnityInstallation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/240ff6271d47469a95269de220922c381dba00/84/5ed69887/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityEditor/6000.0.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.shadergraph/Editor/Drawing/MaterialGraphPreviewGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UnityEditor/6000.0.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite/Editor/SpriteEditorModule/SpriteOutlineModule.cs" root0="SKIP_HIGHLIGHTING" />
@@ -127,10 +132,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8676">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="8676" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -187,7 +192,9 @@
       <workItem from="1737020997772" duration="14136000" />
       <workItem from="1737188702721" duration="593000" />
       <workItem from="1737194812264" duration="12138000" />
-      <workItem from="1737396601194" duration="811000" />
+      <workItem from="1737396601194" duration="1197000" />
+      <workItem from="1737538514066" duration="3362000" />
+      <workItem from="1737632073104" duration="2823000" />
     </task>
     <servers />
   </component>
