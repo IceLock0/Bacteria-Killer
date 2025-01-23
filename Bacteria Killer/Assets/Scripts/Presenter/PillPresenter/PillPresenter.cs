@@ -59,7 +59,8 @@ namespace Presenter.PillPresenter
 
         private void Update()
         {
-            CheckDistanceToPlayer();
+            if(_playerTransform != null)
+                CheckDistanceToPlayer();
         }
 
         private void CheckDistanceToPlayer()

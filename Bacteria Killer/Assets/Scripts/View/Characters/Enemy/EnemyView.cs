@@ -1,4 +1,6 @@
-﻿using Configs.Entities;
+﻿using System.Collections.Generic;
+using Configs.Entities;
+using DG.Tweening;
 using Presenter.Character.Enemy;
 using Services.Movement.PositionProvider;
 using Services.Upgrade;
@@ -10,6 +12,8 @@ namespace View.Characters.Enemy
     [RequireComponent(typeof(Rigidbody2D))]
     public class EnemyView : CharacterView
     {
+        [SerializeField] private List<SpriteRenderer> _bloodPools;
+
         private IPlayerTransformProviderService _playerTransformProviderService;
 
         private EnemyPresenter _enemyPresenter;
@@ -36,6 +40,22 @@ namespace View.Characters.Enemy
                 _playerTransformProviderService, transform, HpView.Presenter, DamageableComponent,
                 GameObjectDestroyerService);
             Presenter = _enemyPresenter;
+        }
+
+        public override void ShowDeath()
+        {
+            var rndBloodPoolIndex = Random.Range(0, _bloodPools.Count);
+            SpriteRenderer bloodPool = _bloodPools[rndBloodPoolIndex];
+
+            SpriteRenderer createdSprite = Instantiate(bloodPool, transform.position, Quaternion.identity);
+
+            var tween = createdSprite.DOFade(0,2);
+
+            tween.OnComplete(() => 
+            {
+                tween.Kill();
+                Destroy(createdSprite.gameObject);
+            });
         }
     }
 }

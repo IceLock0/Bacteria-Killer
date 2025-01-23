@@ -10,6 +10,8 @@ namespace View.Characters.Player
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerView : CharacterView
     {
+        [SerializeField] private ParticleSystem _particleSystem;    
+        
         private PlayerConfig _playerConfig;
 
         private PlayerPresenter _playerPresenter;
@@ -25,6 +27,13 @@ namespace View.Characters.Player
             _playerPresenter = new PlayerPresenter(this, UpdaterService, inputService, _playerConfig, Rigidobdy,
                 HpView.Presenter, DamageableComponent, GameObjectDestroyerService, playerUpgradeProviderService);
             Presenter = _playerPresenter;
+        }
+        
+        public override void ShowDeath()
+        {
+            ParticleSystem createdParticles = Instantiate(_particleSystem, transform.position, Quaternion.identity);
+            
+            createdParticles.Play();
         }
     }
 }

@@ -214,6 +214,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7044a87207564b64a332805d0df0077a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bloodPools:
+  - {fileID: 6332794874467253200, guid: b7ffc624a491ffc42b748a60af864fcf, type: 3}
+  - {fileID: 8671879588516592694, guid: f9ab1597f9adbf149ac64159dac8ae58, type: 3}
+  - {fileID: 7525075470800848595, guid: d3712260a7794744d9574cef2f931141, type: 3}
+  - {fileID: 4837385061077663696, guid: 404a03a1135fbe442a2255379ba0cd5f, type: 3}
+  - {fileID: 4423024250653308412, guid: eaabbaf1dbcdaa442b2bfcd399a15c16, type: 3}
+  - {fileID: 6036605544719096510, guid: 73d1c339fddc2e445a546ee8a3f9e8e6, type: 3}
+  - {fileID: 3227981036972242223, guid: 6ffe91ba5ea918748b67d75a2b0b025e, type: 3}
+  - {fileID: 3630979763115367678, guid: 0876c7108519a494d994dac3b2f58999, type: 3}
+  - {fileID: 4146244236764932755, guid: f611ad0d54f59344bb4187afb7aff3b1, type: 3}
+  - {fileID: 500739087104909948, guid: 2fd6c059c8c82e44e873059f9d2e79d1, type: 3}
+  - {fileID: 3121011757104839461, guid: 7815082b627a1384dacef59b71619a3d, type: 3}
+  EnemyConfig: {fileID: 0}
 --- !u!114 &8340885633030319659
 MonoBehaviour:
   m_ObjectHideFlags: 0

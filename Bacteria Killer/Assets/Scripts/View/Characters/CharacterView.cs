@@ -1,5 +1,7 @@
-﻿using Components.Damageable;
+﻿using System;
+using Components.Damageable;
 using Configs.Entities;
+using Cysharp.Threading.Tasks;
 using Presenter.Character;
 using Services.Destroyer;
 using Services.Updater;
@@ -40,6 +42,8 @@ namespace View.Characters
 
         public CharacterPresenter Presenter { get; protected set; }
 
+        public abstract void ShowDeath();
+        
         private void OnEnable()
         {
             Presenter.OnEnable();

@@ -70,7 +70,8 @@ namespace Presenter.Character
 
         private void Destroy()
         {
-            //show view if needed
+            _characterView.ShowDeath();
+
             _gameObjectDestroyerService.Destroy(_characterView.gameObject);
         }
 
