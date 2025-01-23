@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c53711724e40a7a93cec86d96a7bb6, type: 3}
   m_Name: EnemyXp
   m_EditorClassIdentifier: 
-  _baseXp: 1
-  _scaleValue: 1.2
+  _baseXp: 2.5
+  _scaleValue: 1.5
