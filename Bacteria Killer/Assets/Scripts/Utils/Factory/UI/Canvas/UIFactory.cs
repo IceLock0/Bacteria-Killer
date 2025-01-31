@@ -21,7 +21,7 @@ namespace Utils.Factory.UI
             _mainCamera = Camera.main;
         }
 
-        public Canvas CreateCanvas()
+        public Canvas Create()
         {
             var createdCanvas = _container.InstantiatePrefabForComponent<Canvas>(_mainCanvas);
 
@@ -32,7 +32,7 @@ namespace Utils.Factory.UI
         
         private void Load()
         {
-            _mainCanvas = Resources.Load<Canvas>(UIResourcesPathProvider.MAINCANVAS);
+            _mainCanvas = Resources.Load<Canvas>(UIResourcesPathProvider.CANVAS);
         }
     }
 }

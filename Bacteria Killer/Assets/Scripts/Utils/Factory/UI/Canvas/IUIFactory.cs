@@ -4,6 +4,6 @@ namespace Utils.Factory.UI
 {
     public interface IUIFactory
     {
-        public Canvas CreateCanvas();
+        public Canvas Create();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Services.Destroyer;
 using Services.Detector;
+using Services.Enemy;
 using Services.Fabric.EnemyFabric;
 using Services.Fabric.PlayerFabric;
 using Services.Finder;
@@ -19,17 +20,38 @@ namespace Installers.Scene.Gameplay.Services
         public override void InstallBindings()
         {
             BindInputService();
+            
             BindClosetObjectDetectorService();
+            
             BindEnemyFactoryInstaller();
+            
             BindPlayerFactoryInstaller();
-            BindPlayerPositionProviderService();
+            
+            BindPlayerTranformProviderService();
+            
             BindUpdaterService();
+            
             BindGameObjectDestroyerService();
+            
             BindPillsFactoryInstaller();
+            
             BindPlayerUnspentLevelsProviderService();
+            
             BindUIFactory();
+            
             BindUpgradeViewFactory();
+            
             BindPlayerUpgradeProviderService();
+            
+            BindEnemyTransformsProviderService();
+        }
+
+        private void BindEnemyTransformsProviderService()
+        {
+            Container
+                .Bind<IEnemyTransformsProviderService>()
+                .To<EnemyTransformsProviderService>()
+                .AsSingle();
         }
 
         private void BindPlayerUpgradeProviderService()
@@ -105,7 +127,7 @@ namespace Installers.Scene.Gameplay.Services
                 .AsSingle();
         }
 
-        private void BindPlayerPositionProviderService()
+        private void BindPlayerTranformProviderService()
         {
             Container
                 .Bind<IPlayerTransformProviderService>()

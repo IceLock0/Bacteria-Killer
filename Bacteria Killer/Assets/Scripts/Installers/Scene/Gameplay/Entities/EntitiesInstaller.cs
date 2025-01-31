@@ -1,5 +1,4 @@
-﻿using View;
-using View.Characters.Player;
+﻿using View.Characters.Player;
 using Zenject;
 
 namespace Installers.Scene.Gameplay.Entities

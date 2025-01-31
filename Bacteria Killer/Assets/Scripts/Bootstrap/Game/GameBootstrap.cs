@@ -6,6 +6,7 @@ using Configs.PillSpawn;
 using Configs.Wave;
 using EnemyWaves;
 using Services.Destroyer;
+using Services.Enemy;
 using Services.Fabric.EnemyFabric;
 using Services.Fabric.PlayerFabric;
 using Services.Upgrade;
@@ -46,12 +47,16 @@ namespace Bootstrap.Game
 
         private IPlayerUpgradeProviderService _playerUpgradeProviderService;
         
+        private IEnemyTransformsProviderService _enemyTransformsProviderService;
+
         [Inject]
         public void Initialize(IPlayerFactory playerFactory, PlayerConfig playerConfig, IEnemyFactory enemyFactory,
             WaveConfig waveConfig, IGameObjectDestroyerService gameObjectDestroyerService, IPillFactory pillFactory,
             PillSpawnerConfig pillSpawnerConfig, PillEffectsConfig pillEffectsConfig, IUIFactory uiFactory,
-            IUpgradeViewFactory upgradeViewFactory, IPlayerUpgradeProviderService playerUpgradeProviderService)
+            IUpgradeViewFactory upgradeViewFactory, IPlayerUpgradeProviderService playerUpgradeProviderService,
+            IEnemyTransformsProviderService enemyTransformsProviderService)
         {
+            _enemyTransformsProviderService = enemyTransformsProviderService;
             _playerFactory = playerFactory;
             _playerConfig = playerConfig;
 
@@ -68,15 +73,17 @@ namespace Bootstrap.Game
             _upgradeViewFactory = upgradeViewFactory;
 
             _playerUpgradeProviderService = playerUpgradeProviderService;
+
+            _enemyTransformsProviderService = enemyTransformsProviderService;
         }
 
         private void Awake()
         {
+            CreatePlayer();
+            
             CreateUI();
 
             CreateUpgradeViewsAndInitUpgradeService();
-
-            CreatePlayer();
 
             CreateWaveHandler();
 
@@ -93,7 +100,7 @@ namespace Bootstrap.Game
         {
             _waveHandler.OnDisable();
             _pillSpawner.OnDisable();
-            
+
             foreach (PlayerUpgradeView playerUpgradeView in _upgradeViews)
             {
                 _playerUpgradeProviderService.UnregisterPresenter(playerUpgradeView.PlayerUpgradePresenter);
@@ -102,14 +109,14 @@ namespace Bootstrap.Game
 
         private void CreateUI()
         {
-            _rootCanvas = _uiFactory.CreateCanvas();
+            _rootCanvas = _uiFactory.Create();
         }
 
         private void CreateUpgradeViewsAndInitUpgradeService()
         {
             var playerLevelRoot = _rootCanvas.GetComponentInChildren<PlayerLevelView>();
             var upgradesRoot = playerLevelRoot.GetComponentInChildren<VerticalLayoutGroup>();
-            
+
             _upgradeViews = _upgradeViewFactory.CreateUpgradeViews(upgradesRoot.transform);
 
             foreach (PlayerUpgradeView playerUpgradeView in _upgradeViews)
@@ -127,7 +134,7 @@ namespace Bootstrap.Game
         private void CreateWaveHandler()
         {
             _waveHandler = new WaveHandler(_gameObjectDestroyerService, _enemyFactory, _waveConfig,
-                _playerView.transform);
+                _playerView.transform, _enemyTransformsProviderService);
         }
 
         private void CreatePillSpawner()
