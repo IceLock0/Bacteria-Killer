@@ -11,8 +11,8 @@ namespace Model.Characters
             MaxHp = characterConfig.MaxHp;
         }
 
-        public float LinearSpeed { get; private set; }
-        public float MaxHp { get; private set; }
+        public float LinearSpeed { get; protected set; }
+        public float MaxHp { get; protected set; }
 
         public void IncreaseSpeed(float value)
         {

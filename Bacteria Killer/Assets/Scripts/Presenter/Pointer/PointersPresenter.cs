@@ -147,7 +147,7 @@ namespace Presenter.Pointer
         {
             if (!_pointers.TryGetValue(enemyTransform, out var pointerTransform))
                 return;
-
+            
             _pointers.Remove(enemyTransform);
             
             _gameObjectDestroyerService.Destroy(pointerTransform.gameObject);

@@ -22,7 +22,7 @@ namespace Services.Enemy
 
         public void RemoveTransform(Transform transform)
         {
-            if (_transforms.Contains(transform)) 
+            if (!_transforms.Contains(transform)) 
                 return;
             
             _transforms.Remove(transform);

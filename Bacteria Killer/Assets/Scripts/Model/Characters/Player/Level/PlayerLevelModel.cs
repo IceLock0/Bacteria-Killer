@@ -69,7 +69,7 @@ namespace Model.Characters.Player.Level
 
         private float GetNextTargetXp()
         {
-            return XpCalculator.CalculateTargetLevelXp(_baseXp, _scaleValue, _currentLevel);
+            return XpAndScoreCalculator.CalculateTargetLevelXp(_baseXp, _scaleValue, _currentLevel);
         }
         
     }

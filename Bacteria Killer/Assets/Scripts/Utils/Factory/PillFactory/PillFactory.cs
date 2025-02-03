@@ -11,12 +11,14 @@ namespace Utils.Factory.PillFactory
     public class PillFactory : IPillFactory
     {
         private readonly DiContainer _container;
+        private readonly Transform _pillsContainerTransform;
         
         private PillView[] _pills;
 
         public PillFactory(DiContainer container)
         {
             _container = container;
+            _pillsContainerTransform = new GameObject("Pills").transform;
             Load();
         }
 
@@ -37,6 +39,8 @@ namespace Utils.Factory.PillFactory
             pillView.InitializeByFabric(pillEffects);
             pillView.gameObject.SetActive(true);
 
+            pillView.gameObject.transform.SetParent(_pillsContainerTransform);
+            
             return pillView;
         }
 

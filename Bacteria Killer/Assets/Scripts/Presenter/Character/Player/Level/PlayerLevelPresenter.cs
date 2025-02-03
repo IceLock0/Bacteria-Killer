@@ -72,7 +72,7 @@ namespace Presenter.Character.Player.Level
 
             var enemyDifficult = enemy.EnemyConfig.Difficult;
             
-            var xp = XpCalculator.CalculateXpForEnemy(_playerLevelConfig.EnemyXpConfig.BaseXp, _playerLevelConfig.EnemyXpConfig.ScaleValue, enemyDifficult);
+            var xp = XpAndScoreCalculator.CalculateXpForEnemy(_playerLevelConfig.EnemyXpConfig.BaseXp, _playerLevelConfig.EnemyXpConfig.ScaleValue, enemyDifficult);
             
             Debug.Log($"Xp {xp}");
             

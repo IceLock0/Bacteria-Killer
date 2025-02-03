@@ -29,17 +29,24 @@ namespace View.Characters.Enemy
             _playerUpgradeProviderService = playerUpgradeProviderService;
         }
         
-        public void InitializeByFabric(EnemyConfig enemyConfig)
+        public void InitializeByFabric(EnemyConfig enemyConfig, float bossScaler)
         {
             EnemyConfig = enemyConfig;
             CharacterConfig = EnemyConfig;
 
             HpView.Initialize(CharacterConfig, _playerUpgradeProviderService);
-
-            _enemyPresenter = new EnemyPresenter(this, UpdaterService, EnemyConfig, Rigidobdy,
+            
+            _enemyPresenter = new EnemyPresenter(this, bossScaler, UpdaterService, EnemyConfig, Rigidobdy,
                 _playerTransformProviderService, transform, HpView.Presenter, DamageableComponent,
                 GameObjectDestroyerService);
             Presenter = _enemyPresenter;
+
+            if (bossScaler > 1)
+            {
+                gameObject.transform.localScale *= bossScaler;
+                var sprite = GetComponentInChildren<SpriteRenderer>();
+                sprite.color = Color.red;
+            }
         }
 
         public override void ShowDeath()

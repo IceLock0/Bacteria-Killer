@@ -1,4 +1,5 @@
-﻿using Configs;
+﻿using System;
+using Configs;
 using Presenter.Character.Player;
 using Services.Input;
 using Services.Upgrade;
@@ -31,6 +32,8 @@ namespace View.Characters.Player
         
         public override void ShowDeath()
         {
+            Camera.main?.gameObject.transform.SetParent(null);
+            
             ParticleSystem createdParticles = Instantiate(_particleSystem, transform.position, Quaternion.identity);
             
             createdParticles.Play();

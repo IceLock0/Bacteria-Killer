@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Configs;
 using Configs.PillEffects;
 using Configs.PillSpawn;
@@ -101,7 +100,7 @@ namespace Bootstrap.Game
             _waveHandler.OnDisable();
             _pillSpawner.OnDisable();
 
-            foreach (PlayerUpgradeView playerUpgradeView in _upgradeViews)
+            foreach (var playerUpgradeView in _upgradeViews)
             {
                 _playerUpgradeProviderService.UnregisterPresenter(playerUpgradeView.PlayerUpgradePresenter);
             }
@@ -119,7 +118,7 @@ namespace Bootstrap.Game
 
             _upgradeViews = _upgradeViewFactory.CreateUpgradeViews(upgradesRoot.transform);
 
-            foreach (PlayerUpgradeView playerUpgradeView in _upgradeViews)
+            foreach (var playerUpgradeView in _upgradeViews)
             {
                 _playerUpgradeProviderService.RegisterPresenter(playerUpgradeView.PlayerUpgradePresenter);
             }

@@ -22,11 +22,16 @@ namespace EnemyWaves
         private readonly float _minSpawnDistance;
         private readonly float _maxSpawnDistance;
 
+        private readonly int _bossFrequency;
+        private int _wavesToBoss;
+        private float _bossScaler;
+        
         private readonly float _difficultFactor;
 
         private float _nextDifficult;
         private float _usedDifficult = 0;
-
+        
+        
         private readonly IEnemyTransformsProviderService _enemyTransformsProviderService;
         
         public WaveHandler(IGameObjectDestroyerService gameObjectDestroyerService, IEnemyFactory factory,
@@ -41,6 +46,10 @@ namespace EnemyWaves
             _minSpawnDistance = config.MinSpawnDistance;
             _maxSpawnDistance = config.MaxSpawnDistance;
 
+            _bossFrequency = config.BossFrequency;
+            _wavesToBoss = _bossFrequency;
+            _bossScaler = config.BossScaler;
+            
             _difficultFactor = config.DifficultFactor;
             _nextDifficult = config.StartDifficult;
 
@@ -68,7 +77,7 @@ namespace EnemyWaves
             if (gameObject.TryGetComponent<EnemyView>(out var enemyView))
             {
                 _wave.RemoveEnemy(enemyView);
-                _enemyTransformsProviderService.RemoveTransform(enemyView.transform);;
+                _enemyTransformsProviderService.RemoveTransform(enemyView.transform);
             }
         }
 
@@ -81,6 +90,7 @@ namespace EnemyWaves
 
             _usedDifficult = 0;
             _nextDifficult += _difficultFactor;
+            _wavesToBoss--;
         }
 
         private void AddEnemyToWave()
@@ -98,25 +108,42 @@ namespace EnemyWaves
 
             _usedDifficult += difficult;
         }
-
-        private float GetRandomEnemyDifficult()
-        {
-            var difficult = Random.Range(0, _nextDifficult - _usedDifficult);
-            return difficult;
-        }
-
+        
         private EnemyView CreateEnemy(out float resultDifficult)
         {
-            var targetDifficult = GetRandomEnemyDifficult();
-            Vector2 position =
-                RandomPositionHandler.GetRandomPosition(_playerTransform.position, _minSpawnDistance,
-                    _maxSpawnDistance);
+            return _wavesToBoss <= 0 ? CreateBoss(out resultDifficult) : CreateDefault(out resultDifficult);
+        }
 
-            EnemyView enemy = _factory.Create(targetDifficult, position, Quaternion.identity, out var resultConfig);
+        private EnemyView CreateBoss(out float resultDifficult)
+        {
+            var difficult = _nextDifficult;
+            var position = GetPosition();
+            
+            var enemy = _factory.Create(difficult, _bossScaler, position, Quaternion.identity, out var resultConfig);
+
+            resultDifficult = 0;
+
+            _wavesToBoss = _bossFrequency;
+            
+            return enemy;
+        }
+
+        private EnemyView CreateDefault(out float resultDifficult)
+        {
+            var difficult = GetDifficult();
+            var position = GetPosition();
+            
+            var enemy = _factory.Create(difficult, 1, position, Quaternion.identity, out var resultConfig);
 
             resultDifficult = resultConfig == null ? 0 : resultConfig.Difficult;
 
             return enemy;
         }
+        
+        private float GetDifficult() =>
+            Random.Range(0, _nextDifficult - _usedDifficult);
+        
+        private Vector2 GetPosition() =>
+            RandomPositionHandler.GetRandomPosition(_playerTransform.position, _minSpawnDistance, _maxSpawnDistance);
     }
 }

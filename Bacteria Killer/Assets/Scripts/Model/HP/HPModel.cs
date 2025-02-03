@@ -36,7 +36,7 @@ namespace Model.HP
         public void IncreaseMaxHp(float value)
         {
             _maxHP += value;
-            Changed?.Invoke(_currentHP, _maxHP);
+            Heal(_maxHP);
         }
     }
 }

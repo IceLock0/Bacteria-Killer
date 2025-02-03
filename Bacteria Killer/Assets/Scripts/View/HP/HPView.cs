@@ -25,7 +25,7 @@ namespace View.HP
 
         public void Destroy()
         {
-            //blood
+            //show death
         }
         
         private void OnEnable()

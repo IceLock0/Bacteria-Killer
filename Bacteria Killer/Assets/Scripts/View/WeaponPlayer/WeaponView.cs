@@ -29,7 +29,7 @@ namespace View.Weapon
             IPlayerUpgradeProviderService playerUpgradeProviderService)
         {
             ITargetService playerTargetService =
-                new PlayerTargetService(closestObjectFindService, playerView.transform);
+                new PlayerTargetService(closestObjectFindService, playerView.transform, weaponConfig.Distance);
 
             Presenter = new WeaponPresenter(playerTargetService, updaterService, weaponConfig, this, playerUpgradeProviderService);
 

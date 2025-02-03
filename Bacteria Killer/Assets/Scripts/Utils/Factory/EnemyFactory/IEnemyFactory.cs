@@ -7,6 +7,7 @@ namespace Services.Fabric.EnemyFabric
 {
     public interface IEnemyFactory
     {
-        public EnemyView Create(float difficult, Vector2 at, Quaternion rotation, out EnemyConfig resultConfig, Transform parent = null);
+        public EnemyView Create(float difficult, float bossScaler, Vector2 at, Quaternion rotation, out EnemyConfig resultConfig,
+            Transform parent = null);
     }
 }

@@ -20,7 +20,13 @@ namespace Services.Fabric.PlayerFabric
         
         public PlayerView Create(Vector2 position, Quaternion rotation, Transform parent = null)
         {
-            return _container.InstantiatePrefabForComponent<PlayerView>(_player, position, rotation, parent);
+            var player = _container.InstantiatePrefabForComponent<PlayerView>(_player, position, rotation, parent);
+            
+            var camera = Camera.main;
+            
+            camera?.transform.SetParent(player.gameObject.transform);
+            
+            return player;
         }
 
         private void Load()

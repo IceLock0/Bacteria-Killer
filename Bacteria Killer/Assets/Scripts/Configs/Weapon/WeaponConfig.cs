@@ -15,6 +15,8 @@ namespace Configs.Weapon
         [SerializeField] private float _reloadingTimeSec;
 
         [SerializeField] private float _damage;
+        
+        [SerializeField] private float _distance;
 
         public ShootConfig ShootConfig => _shootConfig;
         
@@ -25,5 +27,7 @@ namespace Configs.Weapon
         public float ReloadingTimeSec => _reloadingTimeSec;
 
         public float Damage => _damage;
+        
+        public float Distance => _distance;
     }
 }

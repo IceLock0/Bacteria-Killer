@@ -22,14 +22,14 @@ namespace Presenter.Character.Enemy
 
         private readonly EnemyAttacker _enemyAttacker;
 
-        public EnemyPresenter(EnemyView enemyView, IUpdaterService updaterService, EnemyConfig enemyConfig,
+        public EnemyPresenter(EnemyView enemyView, float bossScaler, IUpdaterService updaterService, EnemyConfig enemyConfig,
             Rigidbody2D rigidbody,
             IPlayerTransformProviderService playerTransformProviderService, Transform enemyTransform,
             HPPresenter hpPresenter, DamageableComponent damageableComponent,
             IGameObjectDestroyerService gameObjectDestroyerService)
             : base(enemyView, updaterService, hpPresenter, damageableComponent, gameObjectDestroyerService)
         {
-            _enemyModel = new EnemyModel(enemyConfig);
+            _enemyModel = new EnemyModel(enemyConfig, bossScaler);
             CharacterModel = _enemyModel;
 
             _updaterService = updaterService;

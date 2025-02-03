@@ -21,13 +21,18 @@ namespace Installers.Configs
         public override void InstallBindings()
         {
             BindPlayerConfig();
+            
             BindWeaponConfig();
+            
             BindWaveConfig();
+            
             BindPillsSpawnerConfig();
+            
             BindPillEffectsConfig();
+            
             BindPlayerLevelConfig();
         }
-
+        
         private void BindPlayerLevelConfig()
         {
             Container

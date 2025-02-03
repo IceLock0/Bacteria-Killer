@@ -4,16 +4,13 @@ namespace Model.Characters.Enemy
 {
     public class EnemyModel : CharacterModel
     {
-        public EnemyModel(EnemyConfig enemyConfig) : base(enemyConfig)
-        {
-                SetEnemyConfigData(enemyConfig);
-        }
-
-        private void SetEnemyConfigData(EnemyConfig enemyConfig)
+        public EnemyModel(EnemyConfig enemyConfig, float bossScaler) : base(enemyConfig)
         {
             AttackDistance = enemyConfig.AttackDistance;
-            AttackDamage = enemyConfig.AttackDamage;
-            Difficult = enemyConfig.Difficult;
+            AttackDamage = enemyConfig.AttackDamage * bossScaler;
+            Difficult = enemyConfig.Difficult * bossScaler;
+            LinearSpeed *= bossScaler;
+            MaxHp *= bossScaler;
         }
         
         public float AttackDistance { get; private set; }

@@ -23,9 +23,9 @@ namespace Installers.Scene.Gameplay.Services
             
             BindClosetObjectDetectorService();
             
-            BindEnemyFactoryInstaller();
+            BindEnemyFactory();
             
-            BindPlayerFactoryInstaller();
+            BindPlayerFactory();
             
             BindPlayerTranformProviderService();
             
@@ -33,7 +33,7 @@ namespace Installers.Scene.Gameplay.Services
             
             BindGameObjectDestroyerService();
             
-            BindPillsFactoryInstaller();
+            BindPillsFactory();
             
             BindPlayerUnspentLevelsProviderService();
             
@@ -45,7 +45,7 @@ namespace Installers.Scene.Gameplay.Services
             
             BindEnemyTransformsProviderService();
         }
-
+        
         private void BindEnemyTransformsProviderService()
         {
             Container
@@ -86,7 +86,7 @@ namespace Installers.Scene.Gameplay.Services
                 .AsSingle();
         }
 
-        private void BindPillsFactoryInstaller()
+        private void BindPillsFactory()
         {
             Container
                 .Bind<IPillFactory>()
@@ -111,7 +111,7 @@ namespace Installers.Scene.Gameplay.Services
                 .AsSingle();
         }
 
-        private void BindEnemyFactoryInstaller()
+        private void BindEnemyFactory()
         {
             Container
                 .Bind<IEnemyFactory>()
@@ -119,7 +119,7 @@ namespace Installers.Scene.Gameplay.Services
                 .AsSingle();
         }
 
-        private void BindPlayerFactoryInstaller()
+        private void BindPlayerFactory()
         {
             Container
                 .Bind<IPlayerFactory>()

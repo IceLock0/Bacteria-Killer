@@ -1,7 +1,7 @@
 ﻿using Services.Detector;
 using UnityEngine;
-using View;
 using View.Characters.Enemy;
+using Vector2 = UnityEngine.Vector2;
 
 namespace Services.Target
 {
@@ -10,36 +10,25 @@ namespace Services.Target
         private readonly IClosestObjectFindService _closestObjectFindService;
         private readonly Transform _playerTransform;
 
-        private readonly Vector2 _cameraBounds;
-        
-        public PlayerTargetService(IClosestObjectFindService closestObjectFindService, Transform playerTransform)
+        private readonly float _distance;
+
+        public PlayerTargetService(IClosestObjectFindService closestObjectFindService, Transform playerTransform,
+            float distance)
         {
             _closestObjectFindService = closestObjectFindService;
             _playerTransform = playerTransform;
-
-            _cameraBounds = GetCameraBounds();
+            _distance = distance;
         }
 
         public GameObject GetTarget()
         {
             if (_playerTransform == null)
                 return null;
-            
-            var enemy = _closestObjectFindService.GetClosestObjectInBoxByType<EnemyView>(_playerTransform.position, _cameraBounds);
-            
+
+            var enemy = _closestObjectFindService.GetClosestObjectInBoxByType<EnemyView>(_playerTransform.position,
+                new Vector2(_distance, _distance));
+
             return enemy == null ? null : enemy.gameObject;
-        }
-
-        private Vector2 GetCameraBounds()
-        {
-            var camera = Camera.main;
-            
-            float cameraHeight = camera.orthographicSize * 2;
-            float cameraWidth = cameraHeight * camera.aspect;
-
-            Vector2 cameraPosition = camera.transform.position;
-
-            return new Vector2(cameraWidth, cameraHeight);
         }
     }
 }
