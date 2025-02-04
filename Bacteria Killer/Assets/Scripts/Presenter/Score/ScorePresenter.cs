@@ -67,7 +67,11 @@ namespace Presenter.Score
             _saveLoadService.Save(SaveKeys.SCORE, scoreData);
         }
 
-        private float GetPrevScore() =>
-            _saveLoadService.Load<ScoreData>(SaveKeys.SCORE).Score;
+        private float GetPrevScore()
+        {
+            var data = _saveLoadService.Load<ScoreData>(SaveKeys.SCORE);
+            
+            return data == null ? 0 : data.Score;
+        }
     }
 }
