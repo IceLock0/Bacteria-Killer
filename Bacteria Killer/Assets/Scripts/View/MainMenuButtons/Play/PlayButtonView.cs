@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 using Utils.Extensions;
 
@@ -8,19 +9,16 @@ namespace View.MainMenuButtons
     {
         [SerializeField] private Button _playButton;
 
-        private void StartGame()
-        {
-            Debug.Log($"Game started");
-        }
+        public event Action Clicked; 
         
         private void OnEnable()
         {
-            _playButton.AddListener(StartGame);
+            _playButton.AddListener(() => Clicked?.Invoke());
         }
 
         private void OnDisable()
         {
-            _playButton.RemoveListener(StartGame);
+            _playButton.RemoveListener(() => Clicked?.Invoke());
         }
     }
 }

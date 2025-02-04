@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _color: 1
+  _effectViewPrefab: {fileID: 0}
 --- !u!114 &9079516625736062306
 MonoBehaviour:
   m_ObjectHideFlags: 0

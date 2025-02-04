@@ -8,6 +8,8 @@ namespace Animations.Transform
         [SerializeField] private Vector2 _targetScale;
         [SerializeField] private float _duration;
 
+        private Tween _tween;
+        
         private void Awake()
         {
             Scale();
@@ -15,9 +17,14 @@ namespace Animations.Transform
 
         private void Scale()
         {
-            transform.DOScale(_targetScale, _duration)
+             _tween = transform.DOScale(_targetScale, _duration)
                 .SetLoops(-1, LoopType.Yoyo)
                 .SetEase(Ease.InOutSine);
+        }
+
+        private void OnDestroy()
+        {
+            _tween?.Kill();
         }
     }
 }

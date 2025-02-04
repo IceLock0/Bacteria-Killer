@@ -24,6 +24,9 @@ namespace Utils.Background
 
         private void Update()
         {
+            if (_playerTransform == null)
+                return;
+            
             UpdateBackground();
         }
 
@@ -92,7 +95,7 @@ namespace Utils.Background
 
         private void SpawnTile(Vector2 position)
         {
-            GameObject newTile = Instantiate(_backgroundPrefab, position, Quaternion.identity);
+            var newTile = Instantiate(_backgroundPrefab, position, Quaternion.identity, transform);
             _spawnedTilesDict[position] = newTile;
         }
     }

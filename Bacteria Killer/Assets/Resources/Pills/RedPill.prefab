@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _color: 3
+  _effectViewPrefab: {fileID: 6614680543574404346, guid: 009ddb33d8ebd964e86e74e3e728c674, type: 3}
 --- !u!114 &7710204474767435666
 MonoBehaviour:
   m_ObjectHideFlags: 0

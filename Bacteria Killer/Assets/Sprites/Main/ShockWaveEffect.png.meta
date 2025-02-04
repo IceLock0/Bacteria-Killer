@@ -1,0 +1,422 @@
+fileFormatVersion: 2
+guid: 40c62fc9701e17b4599397cf0abb5f6d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9157165974341846620
+    second: ShockWaveEffect_0
+  - first:
+      213: -2443007871016354860
+    second: ShockWaveEffect_1
+  - first:
+      213: -3391239026696266569
+    second: ShockWaveEffect_2
+  - first:
+      213: -4085018271714718808
+    second: ShockWaveEffect_3
+  - first:
+      213: -1085378354164400040
+    second: ShockWaveEffect_4
+  - first:
+      213: 7973037513836804796
+    second: ShockWaveEffect_5
+  - first:
+      213: -6478752955511786669
+    second: ShockWaveEffect_6
+  - first:
+      213: 6516409704353672390
+    second: ShockWaveEffect_7
+  - first:
+      213: 8273938159159999300
+    second: ShockWaveEffect_8
+  - first:
+      213: 201573301261195182
+    second: ShockWaveEffect_9
+  - first:
+      213: 8831068362485926476
+    second: ShockWaveEffect_10
+  - first:
+      213: -2508860506462109921
+    second: ShockWaveEffect_11
+  - first:
+      213: 8695724104199198455
+    second: ShockWaveEffect_12
+  - first:
+      213: 1242384559148092829
+    second: ShockWaveEffect_13
+  - first:
+      213: 5639570629205335564
+    second: ShockWaveEffect_14
+  - first:
+      213: 6900575968264114398
+    second: ShockWaveEffect_15
+  - first:
+      213: 3010566230498886368
+    second: ShockWaveEffect_16
+  - first:
+      213: -5571314271924881029
+    second: ShockWaveEffect_17
+  - first:
+      213: 7828166204848955318
+    second: ShockWaveEffect_18
+  - first:
+      213: 8461934440388454628
+    second: ShockWaveEffect_19
+  - first:
+      213: 4686393724068087058
+    second: ShockWaveEffect_20
+  - first:
+      213: -2716788266742243016
+    second: ShockWaveEffect_21
+  - first:
+      213: -7633642885370670649
+    second: ShockWaveEffect_22
+  - first:
+      213: -642455645943279570
+    second: ShockWaveEffect_23
+  - first:
+      213: -8736781408315956278
+    second: ShockWaveEffect_24
+  - first:
+      213: 281827457918261969
+    second: ShockWaveEffect_25
+  - first:
+      213: 5540974634474387838
+    second: ShockWaveEffect_26
+  - first:
+      213: -6636096783247753199
+    second: ShockWaveEffect_27
+  - first:
+      213: 6942527053314063699
+    second: ShockWaveEffect_28
+  - first:
+      213: -2813352326770199149
+    second: ShockWaveEffect_29
+  - first:
+      213: -2428517892877233262
+    second: ShockWaveEffect_30
+  - first:
+      213: 151246673831549534
+    second: ShockWaveEffect_31
+  - first:
+      213: -6347228617219354770
+    second: ShockWaveEffect_32
+  - first:
+      213: -4807854961027504701
+    second: ShockWaveEffect_33
+  - first:
+      213: -5530694318192787772
+    second: ShockWaveEffect_34
+  - first:
+      213: 67845850532170423
+    second: ShockWaveEffect_35
+  - first:
+      213: 134662795993140273
+    second: ShockWaveEffect_36
+  - first:
+      213: 1138932232533070670
+    second: ShockWaveEffect_37
+  - first:
+      213: 7371793709402536645
+    second: ShockWaveEffect_38
+  - first:
+      213: 2968390284313548877
+    second: ShockWaveEffect_39
+  - first:
+      213: 4004956032070707794
+    second: ShockWaveEffect_40
+  - first:
+      213: -2075929131175394044
+    second: ShockWaveEffect_41
+  - first:
+      213: -4242299988261590304
+    second: ShockWaveEffect_42
+  - first:
+      213: 9222308037215581911
+    second: ShockWaveEffect_43
+  - first:
+      213: -4743957888739632314
+    second: ShockWaveEffect_44
+  - first:
+      213: 5487904588280218726
+    second: ShockWaveEffect_45
+  - first:
+      213: -3834835591377268894
+    second: ShockWaveEffect_46
+  - first:
+      213: 4324552555205302276
+    second: ShockWaveEffect_47
+  - first:
+      213: 4607438167639486630
+    second: ShockWaveEffect_48
+  - first:
+      213: -3272531270324069661
+    second: ShockWaveEffect_49
+  - first:
+      213: 620013132064370141
+    second: ShockWaveEffect_50
+  - first:
+      213: 4541367940385497503
+    second: ShockWaveEffect_51
+  - first:
+      213: 1014325633612842772
+    second: ShockWaveEffect_52
+  - first:
+      213: 7639401900470980538
+    second: ShockWaveEffect_53
+  - first:
+      213: -3106898630285961004
+    second: ShockWaveEffect_54
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ShockWaveEffect_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 356
+        width: 111
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57495f2e609672b4594291d1c52c423c
+      internalID: -1455691558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShockWaveEffect_3
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 320
+        width: 205
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8acebab84fab7748915d51c1c268eb9
+      internalID: 1506214637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShockWaveEffect_0
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 293
+        width: 227
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41cddad2e0ac8fe418e20f66e7c3be39
+      internalID: -361712935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShockWaveEffect_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 253
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e4344753e9a25488d23ff6dfe3d0aa
+      internalID: -260328222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShockWaveEffect_4
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 0
+        width: 259
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7394e7b26d9a81242bc933048451826b
+      internalID: 2111815047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5003e79c8ca959a4d890280c3f40e0e6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ShockWaveEffect_0: -361712935
+      ShockWaveEffect_1: -260328222
+      ShockWaveEffect_2: -1455691558
+      ShockWaveEffect_3: 1506214637
+      ShockWaveEffect_4: 2111815047
+      ShockWaveEffect_55: -868343416
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

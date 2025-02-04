@@ -1,8 +1,8 @@
-﻿using Configs.Weapon;
+﻿using System.Threading;
+using Configs.Weapon;
 using Damagers.Player.Weapon;
 using Damagers.Player.Weapon.Components.Rotator;
 using Services.Detector;
-using Services.Movement.PositionProvider;
 using Services.Target;
 using Services.Updater;
 using Services.Upgrade;
@@ -18,11 +18,13 @@ namespace View.Weapon
         [SerializeField] private bool _isFlipped;
 
         [SerializeField] private Transform _firePoint;
-
+        
         private WeaponRotator _weaponRotator;
 
         private ShootView _shootView;
 
+        private readonly CancellationTokenSource _cts = new();
+        
         [Inject]
         public void Initialize(IClosestObjectFindService closestObjectFindService, IUpdaterService updaterService,
             WeaponConfig weaponConfig, PlayerView playerView,
@@ -38,7 +40,8 @@ namespace View.Weapon
             LineRenderer shootPrefab = Instantiate(weaponConfig.ShootConfig.LineRendererPrefab, Vector3.zero,
                 quaternion.identity, playerView.transform);
 
-            _shootView = new ShootView(shootPrefab, _firePoint, weaponConfig.ShootConfig.DurationSec);
+            
+            _shootView = new ShootView(shootPrefab, _firePoint, weaponConfig.ShootConfig.DurationSec, _cts.Token);
         }
 
         public WeaponPresenter Presenter { get; private set; }
@@ -57,7 +60,9 @@ namespace View.Weapon
         private void OnDisable()
         {
             Presenter.OnDisable();
-            _weaponRotator.OnEnable();
+            _weaponRotator.OnDisable();
+            
+            _cts.Cancel();
         }
     }
 }

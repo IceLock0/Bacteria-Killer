@@ -1,5 +1,6 @@
 ﻿using Presenter.Score;
 using Services.Destroyer;
+using Services.SaveLoad;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -13,9 +14,9 @@ namespace View.Score
         private ScorePresenter _scorePresenter;
         
         [Inject]
-        public void Initialize(IGameObjectDestroyerService gameObjectDestroyerService)
+        public void Initialize(IGameObjectDestroyerService gameObjectDestroyerService, ISaveLoadService saveLoadService)
         {
-            _scorePresenter = new ScorePresenter(this, gameObjectDestroyerService);
+            _scorePresenter = new ScorePresenter(this, gameObjectDestroyerService, saveLoadService);
             SetScore(0);
         }
 

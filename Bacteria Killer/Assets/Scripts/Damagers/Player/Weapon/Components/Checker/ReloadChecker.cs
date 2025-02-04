@@ -31,7 +31,6 @@ namespace Damagers.Player.Weapon
 
         private async UniTaskVoid Reload()
         { 
-            Debug.Log("Reload");
             _isReloading = true;
             await _weaponPresenter.GetReloadTask();
             _weaponPresenter.Reload();

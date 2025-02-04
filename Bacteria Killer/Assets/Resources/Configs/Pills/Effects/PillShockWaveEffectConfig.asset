@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ac7b96a007544b6b0ff199cb0707005, type: 3}
   m_Name: PillShockWaveEffectConfig
   m_EditorClassIdentifier: 
-  _radius: 7
+  _radius: 2
   _damageValue: 30

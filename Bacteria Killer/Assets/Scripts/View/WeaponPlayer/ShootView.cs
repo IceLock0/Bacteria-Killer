@@ -1,4 +1,6 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace View.Weapon
@@ -11,11 +13,15 @@ namespace View.Weapon
 
         private readonly int _durationMs;
 
-        public ShootView(LineRenderer shootPrefab, Transform firePoint, float duration)
+        private readonly CancellationToken _cancellationToken; 
+        
+        public ShootView(LineRenderer shootPrefab, Transform firePoint, float duration, CancellationToken cancellationToken)
         {
             _shootPrefab = shootPrefab;
             _firePoint = firePoint;
 
+            _cancellationToken = cancellationToken;
+            
             _durationMs = (int)(duration * 1000);
         }
         
@@ -24,22 +30,30 @@ namespace View.Weapon
             if (_shootPrefab == null || target == null)
                 return;
             
-            CreateShoot(target).Forget();
+            CreateShoot(target, _cancellationToken).Forget();
         }
 
-        private async UniTaskVoid CreateShoot(Transform target)
+        private async UniTaskVoid CreateShoot(Transform target, CancellationToken cancellationToken)
         {
-            Vector3[] positions = new[] {_firePoint.position, target.position};
-    
-            _shootPrefab.positionCount = positions.Length;
-            
-            _shootPrefab.SetPositions(positions);
+            try
+            {
+                Vector3[] positions = new[] { _firePoint.position, target.position };
 
-            _shootPrefab.enabled = true;
-            
-            await UniTask.Delay(_durationMs);
-                
-            _shootPrefab.enabled = false;
+                _shootPrefab.positionCount = positions.Length;
+
+                _shootPrefab.SetPositions(positions);
+
+                _shootPrefab.enabled = true;
+
+                await UniTask.Delay(_durationMs, cancellationToken: cancellationToken);
+
+                if(!cancellationToken.IsCancellationRequested)
+                    _shootPrefab.enabled = false;
+            }
+            catch (OperationCanceledException)
+            {
+                Debug.Log("CreateShoot task was cancelled");
+            }
         }
     }
 }

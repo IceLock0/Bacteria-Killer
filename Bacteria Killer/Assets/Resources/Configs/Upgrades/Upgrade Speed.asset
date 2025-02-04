@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _upgradeType: 1
   _maxUpgrade: 7
-  _upgradeValue: 500
+  _upgradeValue: 35

@@ -1,6 +1,6 @@
-﻿using System.IO;
-using UnityEngine;
+﻿using UnityEngine;
 using Utils.ResourcesPathes.UI;
+using View.Root;
 using Zenject;
 
 namespace Utils.Factory.UI
@@ -9,7 +9,7 @@ namespace Utils.Factory.UI
     {
         private readonly DiContainer _container;
 
-        private Canvas _mainCanvas;
+        private UIGameplayRootView _root;
         private Camera _mainCamera;
         
         public UIFactory(DiContainer container)
@@ -23,7 +23,7 @@ namespace Utils.Factory.UI
 
         public Canvas Create()
         {
-            var createdCanvas = _container.InstantiatePrefabForComponent<Canvas>(_mainCanvas);
+            var createdCanvas = _container.InstantiatePrefab(_root).GetComponentInChildren<Canvas>();
 
             createdCanvas.worldCamera = _mainCamera;
 
@@ -32,7 +32,7 @@ namespace Utils.Factory.UI
         
         private void Load()
         {
-            _mainCanvas = Resources.Load<Canvas>(UIResourcesPathProvider.CANVAS);
+            _root = Resources.Load<UIGameplayRootView>(UIResourcesPathProvider.GAMEPLAY);
         }
     }
 }

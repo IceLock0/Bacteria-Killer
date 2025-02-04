@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Services.Target;
 using Services.Updater;
 using UnityEngine;
@@ -31,6 +32,8 @@ namespace Damagers.Player.Weapon.Components.Rotator
         public void OnDisable()
         {
             _updaterService.Updated -= Update;
+            
+            _weaponTransform?.DOKill();
         }
 
         private void Update()
@@ -53,8 +56,8 @@ namespace Damagers.Player.Weapon.Components.Rotator
 
             if (_isFlipped)
                 angle -= 180;
-        
-            _weaponTransform.rotation = Quaternion.Euler(0, 0, angle);
+            
+            _weaponTransform.DORotateQuaternion(Quaternion.Euler(0, 0, angle), 0.1f);
         }
     }
 }
