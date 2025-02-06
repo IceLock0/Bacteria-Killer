@@ -4,6 +4,7 @@ using Configs.PillSpawn;
 using Cysharp.Threading.Tasks;
 using Model.Pill;
 using PillEffects;
+using Services.Audio;
 using Services.Destroyer;
 using Services.Movement.PositionProvider;
 using Services.Updater;
@@ -25,12 +26,13 @@ namespace Presenter.PillPresenter
         private readonly IUpdaterService _updaterService;
 
         private readonly float _aliveDistance;
-        
+
         private readonly Transform _playerTransform;
-        
+
         public PillPresenter(PillView view, List<IPillEffect> effects, CollectableComponent collectableComponent,
             IGameObjectDestroyerService gameObjectDestroyerService,
-            IPlayerTransformProviderService playerTransformProviderService, IUpdaterService updaterService, float aliveDistance)
+            IPlayerTransformProviderService playerTransformProviderService, IUpdaterService updaterService,
+            float aliveDistance)
         {
             _model = new PillModel(effects);
             _view = view;
@@ -42,10 +44,10 @@ namespace Presenter.PillPresenter
             _updaterService = updaterService;
 
             _aliveDistance = aliveDistance;
-            
+
             _playerTransform = playerTransformProviderService.GetTransform();
         }
-        
+
         public void OnEnable()
         {
             _collectableComponent.Collected += Collect;
@@ -60,7 +62,7 @@ namespace Presenter.PillPresenter
 
         private void Update()
         {
-            if(_playerTransform != null)
+            if (_playerTransform != null)
                 CheckDistanceToPlayer();
         }
 
@@ -81,6 +83,7 @@ namespace Presenter.PillPresenter
                 effect.Apply(collider);
 
             _view.ShowEffect();
+
             _gameObjectDestroyerService.Destroy(_view.gameObject);
         }
     }

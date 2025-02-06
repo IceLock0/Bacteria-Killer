@@ -19,6 +19,8 @@ namespace View.Characters.Enemy
         private EnemyPresenter _enemyPresenter;
 
         private IPlayerUpgradeProviderService _playerUpgradeProviderService;
+
+        private const string AUDIO_KILL_ENEMY = "KillEnemy";
         
         public EnemyConfig EnemyConfig;
         
@@ -51,6 +53,8 @@ namespace View.Characters.Enemy
 
         public override void ShowDeath()
         {
+            AudioService.Play(AUDIO_KILL_ENEMY);
+            
             var rndBloodPoolIndex = Random.Range(0, _bloodPools.Count);
             SpriteRenderer bloodPool = _bloodPools[rndBloodPoolIndex];
 

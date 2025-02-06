@@ -1,4 +1,5 @@
-﻿using Services.Destroyer;
+﻿using Services.Audio;
+using Services.Destroyer;
 using Services.Detector;
 using Services.Enemy;
 using Services.Fabric.EnemyFabric;
@@ -46,7 +47,7 @@ namespace Installers.Scene.Gameplay.Services
             
             BindEnemyTransformsProviderService();
         }
-
+        
         private void BindEnemyTransformsProviderService()
         {
             Container

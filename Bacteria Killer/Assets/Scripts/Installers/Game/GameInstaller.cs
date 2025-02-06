@@ -1,4 +1,6 @@
-﻿using Services.SaveLoad;
+﻿using Services.Audio;
+using Services.SaveLoad;
+using Utils.ResourcesPathes.Utils;
 using Zenject;
 
 namespace Installers.Game
@@ -8,6 +10,8 @@ namespace Installers.Game
         public override void InstallBindings()
         {
             BindSaveLoadService();
+            
+            BindAudioService();
         }
 
         private void BindSaveLoadService()
@@ -15,6 +19,15 @@ namespace Installers.Game
             Container
                 .Bind<ISaveLoadService>()
                 .To<SaveLoadService>()
+                .AsSingle();
+        }
+
+        private void BindAudioService()
+        {
+            Container
+                .Bind<IAudioService>()
+                .To<AudioService>()
+                .FromComponentInNewPrefabResource(UtilsResourcesPathProvider.AUDIO_SERVICE)
                 .AsSingle();
         }
     }

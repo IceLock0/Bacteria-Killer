@@ -679,6 +679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9000110818145207346}
   - component: {fileID: 8342765944533921898}
+  - component: {fileID: 3945314280538571997}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -750,6 +751,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3945314280538571997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218707085582105746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb945844d994c4dac8ed25533f62c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 8342765944533921898}
 --- !u!1 &2224485766697217145
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,7 +809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6374386634680089740}
-  - component: {fileID: 5307896233614836650}
+  - component: {fileID: 169497499465091003}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -823,7 +837,7 @@ RectTransform:
   m_AnchoredPosition: {x: 7.137512, y: 58}
   m_SizeDelta: {x: 754.32495, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5307896233614836650
+--- !u!114 &169497499465091003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -835,8 +849,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ede3dec86ccc4ce5b3136f4c0f5e2f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _crossButon: {fileID: 1680444382256969547}
-  _button: {fileID: 9180715646382230222}
+  _button: {fileID: 1680444382256969547}
+  _buttonGameObject: {fileID: 9180715646382230222}
 --- !u!1 &2615317983177063807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,7 +1564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85cd3f4d66714dcdad2cbb90c92d5a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playButton: {fileID: 6263080649579159732}
+  _button: {fileID: 6263080649579159732}
 --- !u!1 &4946647769003827826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,5 +2209,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f0affe257b457482e7c7aceb6ae1de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _settingsButton: {fileID: 6416721058217937307}
+  _button: {fileID: 6416721058217937307}
   _settings: {fileID: 2259528877206617888}

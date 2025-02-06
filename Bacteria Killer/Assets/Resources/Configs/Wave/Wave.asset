@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Wave
   m_EditorClassIdentifier: 
   _startDifficult: 5
-  _difficultFactor: 2
+  _difficultFactor: 3
   _bossFrequency: 3
   _bossScaler: 1.3
   _minSpawnDistance: 7
-  _maxSpawnDistance: 13
+  _maxSpawnDistance: 15

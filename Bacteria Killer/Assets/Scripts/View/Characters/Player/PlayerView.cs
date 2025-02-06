@@ -16,7 +16,9 @@ namespace View.Characters.Player
         private PlayerConfig _playerConfig;
 
         private PlayerPresenter _playerPresenter;
-
+        
+        private const string AUDIO_GAME_OVER = "GameOver";
+        
         [Inject]
         public void Initialize(IInputService inputService, PlayerConfig playerConfig, IPlayerUpgradeProviderService playerUpgradeProviderService)
         {
@@ -32,6 +34,8 @@ namespace View.Characters.Player
         
         public override void ShowDeath()
         {
+            AudioService.Play(AUDIO_GAME_OVER);
+            
             Camera.main?.gameObject.transform.SetParent(null);
             
             ParticleSystem createdParticles = Instantiate(_particleSystem, transform.position, Quaternion.identity);

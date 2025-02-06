@@ -5,10 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce175cca-be82-4093-94d1-abee388480f2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bacteria Killer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bacteria Killer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenter/Score/ScorePresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presenter/Score/ScorePresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Wave/Wave.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Configs/Wave/Wave.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Weapon/Weapon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Configs/Weapon/Weapon.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Gameplay/GameplayUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Gameplay/GameplayUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/MainMenu/MainMenuUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/MainMenu/MainMenuUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/WeaponPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/WeaponPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/Game/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/Game/GameInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/Scene/Gameplay/Services/ServicesInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/Scene/Gameplay/Services/ServicesInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Characters/CharacterModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Characters/CharacterModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenter/Pill/PillPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presenter/Pill/PillPresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Factory/EnemyFactory/EnemyFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/Factory/EnemyFactory/EnemyFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/RandomPosition/RandomPositionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/RandomPosition/RandomPositionHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/SaveKeys/SaveKeys.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/SaveKeys/SaveKeys.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Characters/CharacterView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Characters/CharacterView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Enemy/EnemyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Enemy/EnemyView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Player/Level/PlayerLevelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Player/Level/PlayerLevelView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Player/PlayerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Player/PlayerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/GameplayButtons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/GameplayButtons/HomeButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/Gameplay/HomeButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/GameplayButtons/HomeButtonView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/Gameplay/HomeButtonView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Play.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Play.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Play/PlayButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Play/PlayButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Play/PlayButtonView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Play/PlayButtonView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Settings.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Settings.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Settings/CrossSettingsButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Settings/CrossSettingsButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Settings/CrossSettingsButtonView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Settings/CrossSettingsButtonView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Settings/SetiingsButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Settings/SetiingsButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Settings/SetiingsButtonView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Settings/SetiingsButtonView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Pill/PillView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Pill/PillView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Root/UIGameplayRootView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Root/UIGameplayRootView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Sound.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Sound/SoundVolumeView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Sound/SoundVolumeView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/WeaponPlayer/WeaponView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/WeaponPlayer/WeaponView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,15 +199,13 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21792">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="21792" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -245,6 +277,7 @@
       <workItem from="1738658052113" duration="625000" />
       <workItem from="1738658846420" duration="22286000" />
       <workItem from="1738699053422" duration="962000" />
+      <workItem from="1738846082378" duration="20068000" />
     </task>
     <servers />
   </component>

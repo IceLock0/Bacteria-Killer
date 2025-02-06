@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Weapon
   m_EditorClassIdentifier: 
   _shootConfig: {fileID: 11400000, guid: 85740f5d2f0c5234b9e2714237facac3, type: 2}
-  fireRateSec: 0.25
+  fireRateSec: 0.3
   _ammoCapacity: 100
   _reloadingTimeSec: 3
   _damage: 2

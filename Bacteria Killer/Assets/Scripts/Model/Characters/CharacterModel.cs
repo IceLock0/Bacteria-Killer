@@ -1,5 +1,4 @@
 ﻿using Configs.Entities;
-using UnityEngine;
 
 namespace Model.Characters
 {

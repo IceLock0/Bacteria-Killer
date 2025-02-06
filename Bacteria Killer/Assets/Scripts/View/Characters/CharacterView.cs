@@ -3,6 +3,7 @@ using Components.Damageable;
 using Configs.Entities;
 using Cysharp.Threading.Tasks;
 using Presenter.Character;
+using Services.Audio;
 using Services.Destroyer;
 using Services.Updater;
 using UnityEngine;
@@ -25,8 +26,10 @@ namespace View.Characters
 
         protected DamageableComponent DamageableComponent;
 
+        protected IAudioService AudioService;
+        
         [Inject]
-        public void Initialize(IUpdaterService updaterService, IGameObjectDestroyerService gameObjectDestroyerService)
+        public void Initialize(IUpdaterService updaterService, IGameObjectDestroyerService gameObjectDestroyerService, IAudioService audioService)
         {
             UpdaterService = updaterService;
             GameObjectDestroyerService = gameObjectDestroyerService;
@@ -38,6 +41,8 @@ namespace View.Characters
             HpView = GetComponentInChildren<HPView>();
 
             DamageableComponent = GetComponent<DamageableComponent>();
+            
+            AudioService = audioService;
         }
 
         public CharacterPresenter Presenter { get; protected set; }

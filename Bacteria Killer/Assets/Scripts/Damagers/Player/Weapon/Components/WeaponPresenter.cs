@@ -1,6 +1,7 @@
 ﻿using Configs.Weapon;
 using Cysharp.Threading.Tasks;
 using Model.Weapon;
+using Services.Audio;
 using Services.Target;
 using Services.Updater;
 using Services.Upgrade;
@@ -69,15 +70,22 @@ namespace Damagers.Player.Weapon
         public void Reload()
             => _weaponModel.Reload();
 
-        public UniTask GetReloadTask() 
-            => UniTask.Delay(_weaponModel.ReloadingTimeMs);
+        public UniTask GetReloadTask()
+        {
+            _weaponView.ShowReload((float)_weaponModel.ReloadingTimeMs / 1000);
+            
+            return UniTask.Delay(_weaponModel.ReloadingTimeMs);
+        }
 
         public UniTask GetFireRateTask()
              => UniTask.Delay(_weaponModel.FireRateMs);
 
-            
+
         public void Shoot()
-            => _weaponModel.Shoot();
+        {
+            _weaponModel.Shoot();
+            _weaponView.ChangeAmmo(_weaponModel.CurrentAmmo);
+        }
 
         public float GetDamage()
             => _weaponModel.Damage;

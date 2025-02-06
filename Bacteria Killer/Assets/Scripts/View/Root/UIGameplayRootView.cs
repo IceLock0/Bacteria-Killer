@@ -3,8 +3,8 @@ using Data;
 using Services.Destroyer;
 using Services.SaveLoad;
 using UnityEngine;
+using View.Buttons.Gameplay;
 using View.Characters.Player;
-using View.GameplayButtons;
 using Zenject;
 
 namespace View.Root

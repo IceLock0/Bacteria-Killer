@@ -58,7 +58,7 @@ namespace Services.Fabric.EnemyFabric
             
             return enemy;
         }
-
+        
         private EnemyConfig GetMaxSuitableConfig(float difficult)
         {
             EnemyConfig enemyConfig = null;
