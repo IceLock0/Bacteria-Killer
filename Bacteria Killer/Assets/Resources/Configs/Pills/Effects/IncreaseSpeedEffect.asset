@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ca1599956e40aab3c9e7be03f54e3e, type: 3}
   m_Name: IncreaseSpeedEffect
   m_EditorClassIdentifier: 
-  _value: 50
+  _value: 20
   _durationSec: 3

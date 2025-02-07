@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aed95c43212a4fcd8cc227654fc3fa38, type: 3}
   m_Name: PillHealHpEffect
   m_EditorClassIdentifier: 
-  _value: 40
+  _value: 15

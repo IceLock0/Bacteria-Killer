@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Upgrade Speed
   m_EditorClassIdentifier: 
   _upgradeType: 1
-  _maxUpgrade: 7
-  _upgradeValue: 35
+  _maxUpgrade: 6
+  _upgradeValue: 10

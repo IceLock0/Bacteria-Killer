@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd01fc557744a509db10d938f0dfb72, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  _linearSpeed: 80
+  _linearSpeed: 50
   _maxHp: 100
   _spawnPosition: {x: 0, y: 0}

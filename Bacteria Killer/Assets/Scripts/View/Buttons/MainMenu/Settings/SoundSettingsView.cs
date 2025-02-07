@@ -12,6 +12,7 @@ namespace View.MainMenuButtons
     public class SoundSettingsView : MonoBehaviour
     {
         [SerializeField] private Slider _volumeSlider;
+        [SerializeField] private Image _volumeFillingImage;
         [SerializeField] private AudioMixer _mixer;
         
         private ISaveLoadService _saveLoadService;
@@ -22,16 +23,13 @@ namespace View.MainMenuButtons
         public void Initialize(ISaveLoadService saveLoadService)
         {
             _saveLoadService = saveLoadService;
-        }
-
-        private void Start()
-        {
             Load();
         }
 
         private void SetVolume(float value)
         {
             _mixer.SetFloat(MIXER_NAME, Mathf.Lerp(-80.0f, 0.0f, value));
+            _volumeFillingImage.fillAmount = value;
         }
 
         private void SetSlider(float value)

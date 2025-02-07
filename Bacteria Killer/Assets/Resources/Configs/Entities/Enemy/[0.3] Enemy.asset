@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faee3220175d4adab83f6558a1751ab4, type: 3}
-  m_Name: '[1][0.5] Enemy'
+  m_Name: '[0.3] Enemy'
   m_EditorClassIdentifier: 
-  _linearSpeed: 60
-  _maxHp: 7
+  _linearSpeed: 51
+  _maxHp: 35
   _attackDistance: 1.5
-  _attackDamage: 4
-  _difficult: 1.5
+  _attackDamage: 7
+  _difficult: 0.3

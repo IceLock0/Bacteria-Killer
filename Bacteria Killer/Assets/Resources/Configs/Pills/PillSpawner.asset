@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c3f6e12e4914805a3a485018e83eac9, type: 3}
   m_Name: PillSpawner
   m_EditorClassIdentifier: 
-  _maxPills: 5
+  _maxPills: 3
   _minDistance: 10
   _maxDistance: 18

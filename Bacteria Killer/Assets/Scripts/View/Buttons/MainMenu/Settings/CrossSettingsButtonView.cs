@@ -19,8 +19,6 @@ namespace View.MainMenuButtons
         public void Initialize(ISaveLoadService saveLoadService)
         {
             _saveLoadService = saveLoadService;
-            
-            gameObject.SetActive(false);
         }
 
         protected override void OnClick()
@@ -28,6 +26,11 @@ namespace View.MainMenuButtons
             PlayAudio();
             CloseSettings();
             Save();
+        }
+
+        private void Awake()
+        {
+            gameObject.SetActive(false);
         }
         
         private void CloseSettings()

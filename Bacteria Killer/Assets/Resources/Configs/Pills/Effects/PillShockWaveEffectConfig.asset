@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PillShockWaveEffectConfig
   m_EditorClassIdentifier: 
   _radius: 2
-  _damageValue: 30
+  _damageValue: 20

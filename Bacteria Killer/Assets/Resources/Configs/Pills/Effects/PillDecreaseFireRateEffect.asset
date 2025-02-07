@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb33323da924ad8a0de419ece77b1a0, type: 3}
   m_Name: PillDecreaseFireRateEffect
   m_EditorClassIdentifier: 
-  _value: 0.075
+  _value: 0.085
   _durationSec: 4

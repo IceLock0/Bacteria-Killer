@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utils.ResourcesPathes.UI;
+using Utils.ResourcesPathes.Utils;
 using View.Root;
 
 namespace EntryPoint.Game
@@ -24,6 +25,9 @@ namespace EntryPoint.Game
             var prefabUIRoot = Resources.Load<UIRootView>(UIResourcesPathProvider.ROOT);
             _uiRoot = Object.Instantiate(prefabUIRoot);
             Object.DontDestroyOnLoad(_uiRoot.gameObject);
+            
+            var cursor = Resources.Load<Texture2D>(UtilsResourcesPathProvider.CURSOR);
+            Cursor.SetCursor(cursor, new Vector2(0.5f,0.5f), CursorMode.Auto);
         }
         
         private async UniTaskVoid RunGame()

@@ -5,44 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce175cca-be82-4093-94d1-abee388480f2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Wave/Wave.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Configs/Wave/Wave.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bacteria Killer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bacteria Killer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[0.5] Enemy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[0.5] Enemy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[1] Enemy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[1] Enemy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[1][0.5] Enemy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[1][0.5] Enemy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[2] Enemy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[2] Enemy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[2][0.5] Enemy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[2][0.5] Enemy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[3] Enemy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[3] Enemy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[3][0.5] Enemy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[3][0.5] Enemy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[4] Enemy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[4] Enemy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[4][0.5] Enemy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[4][0.5] Enemy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[999] Enemy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Enemy/[999] Enemy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Player/Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Configs/Entities/Player/Player.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Pills/PillSpawner.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Configs/Pills/PillSpawner.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Upgrades/Upgrade Speed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Configs/Upgrades/Upgrade Speed.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Configs/Weapon/Weapon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Configs/Weapon/Weapon.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/Gameplay/GameplayUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/Gameplay/GameplayUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Enemies/Enemy.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Enemies/Enemy.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/UI/MainMenu/MainMenuUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UI/MainMenu/MainMenuUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/WeaponPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Damagers/Player/Weapon/Components/WeaponPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/Game/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/Game/GameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/Scene/Gameplay/Services/ServicesInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/Scene/Gameplay/Services/ServicesInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Characters/CharacterModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Characters/CharacterModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenter/Pill/PillPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presenter/Pill/PillPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Factory/EnemyFactory/EnemyFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/Factory/EnemyFactory/EnemyFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/RandomPosition/RandomPositionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/RandomPosition/RandomPositionHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/SaveKeys/SaveKeys.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/SaveKeys/SaveKeys.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Characters/CharacterView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Characters/CharacterView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Enemy/EnemyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Enemy/EnemyView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Player/Level/PlayerLevelView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Player/Level/PlayerLevelView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Player/PlayerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Characters/Player/PlayerView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/GameplayButtons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/GameplayButtons/HomeButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/Gameplay/HomeButtonView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/GameplayButtons/HomeButtonView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/Gameplay/HomeButtonView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Play.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Play.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Play/PlayButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Play/PlayButtonView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Play/PlayButtonView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Play/PlayButtonView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Settings.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Settings.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Settings/CrossSettingsButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Settings/CrossSettingsButtonView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Settings/CrossSettingsButtonView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Settings/CrossSettingsButtonView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Settings/SetiingsButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Settings/SetiingsButtonView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainMenuButtons/Settings/SetiingsButtonView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Settings/SetiingsButtonView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Pill/PillView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Pill/PillView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Root/UIGameplayRootView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Root/UIGameplayRootView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Sound.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Sound/SoundVolumeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Sound/SoundVolumeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/WeaponPlayer/WeaponView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/WeaponPlayer/WeaponView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/Game/GameEntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntryPoint/Game/GameEntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/ResourcesPathes/Utils/UtilsResourcesPathProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utils/ResourcesPathes/Utils/UtilsResourcesPathProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Settings/CrossSettingsButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Settings/CrossSettingsButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Settings/SoundSettingsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/Buttons/MainMenu/Settings/SoundSettingsView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +84,7 @@
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Flow/Framework/Events/GameObjectEventUnit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Flow/Framework/Events/IEventUnit.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/240ff6271d47469a95269de220922c381dba00/0b/3edba91c/Component.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/240ff6271d47469a95269de220922c381dba00/a9/f333b976/Cursor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/240ff6271d47469a95269de220922c381dba00/f5/0eda823f/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/5c/92b8ec18/Action.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/ff/427c671b/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -278,6 +274,7 @@
       <workItem from="1738658846420" duration="22286000" />
       <workItem from="1738699053422" duration="962000" />
       <workItem from="1738846082378" duration="20068000" />
+      <workItem from="1738921221268" duration="4624000" />
     </task>
     <servers />
   </component>
